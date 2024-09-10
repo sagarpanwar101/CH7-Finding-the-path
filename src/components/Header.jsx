@@ -7,7 +7,7 @@ const Title = () => {
     );
   } 
 
-  const NavComponent = () => {
+  const NavComponent = () => {     
     const [btnNameReact, setbtnNameReact]  = useState("Login");
     return (
       <div className="nav-items">

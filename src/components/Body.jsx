@@ -7,20 +7,25 @@ import Shimmer from "../components/Shimmer";
 const Body = () => {
   const [listOfRestaurant, setListOfRestaurant] = useState([]);
   const [FilteredList, setFilteredList] = useState([]);
-  const [searchText, setsearchText] = useState("");
+  const [searchText, setSearchText] = useState("");
+  const [loadingData, setLoadingData] = useState(false)
 
-// Whenever react state updates, react triggers reconcilation cycle (re-renders the component)
-const filterData = (searchText, restaurants) => {
+// Filtering resturants based on search
+const filterData = (newsearchText, restaurants) => {
   return restaurants.filter(restaurant =>
-    restaurant.data.name.toLowerCase().includes(searchText.toLowerCase())
+    restaurant?.info?.name.toLowerCase().includes(searchText.toLowerCase())
   );
 }
+
+// Whenever react state updates, react triggers reconcilation cycle (re-renders the component)
   useEffect(() => {
     fetchData();
   }, []);
 
+  // fetch all the original resturants
   const fetchData = async () => {
     try {
+      setLoadingData(true)
       const data = await fetch(GET_RES_API_URL);
       const json = await data.json();
       const restList = []
@@ -35,6 +40,7 @@ const filterData = (searchText, restaurants) => {
       // const restaurant = json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
       if (restList) {
         setListOfRestaurant(restList);
+        setLoadingData(false)
         setFilteredList(restList);
       }
     } catch (error) {
@@ -42,27 +48,48 @@ const filterData = (searchText, restaurants) => {
     }
   }
 
-  if (listOfRestaurant.length ===0) {
+  if (loadingData) {
     return <Shimmer/>
   }
 
+  // const handleSearch = (e) => {
+  //   setSearchText(e.target.value);
+  //   const filteredRestaurants = filterData(searchText, listOfRestaurant);
+  //   // console.log(filteredRestaurants);
+  //   setListOfRestaurant(filteredRestaurants);
+  // }
+
+
   const handleSearch = (e) => {
-    const filteredRestaurants = filterData(searchText, listOfRestaurant);
+    const newSearchText = e.target.value;
+    setSearchText(newSearchText);
+    const filteredRestaurants = filterData(newSearchText, listOfRestaurant);
     setFilteredList(filteredRestaurants);
-    setSearchText(e.target.value);
   }
+
+  // filtering top rated
 
   const handleFilter = () => {
     const filteredList = listOfRestaurant.filter(
-      (data) => data?.info?.avgRating >= 3.0
+      (data) => data?.info?.avgRating >= 4.0
     );
     setFilteredList(filteredList);
   }
+
+  // const handleFilter = () => {
+  //   setLoadingData(true)
+  //   const filteredList = listOfRestaurant.filter(
+  //     (data) => data?.info?.avgRating >=4.0
+  //   );
+  //   setLoadingData(false)
+  //   setListOfRestaurant(filteredList);
+  // }
 
   return (
     <>
       <div className="search-container">
         <input type="text" placeholder="Search restaurants" value={searchText} className="search-input" onChange={handleSearch} />
+        <button onClick={() => {location.reload()}}>reset</button>
       </div>
       <div className="filtercontainer">
         <button
@@ -73,18 +100,27 @@ const filterData = (searchText, restaurants) => {
         </button>
       </div>
       <div className="restaurant-list">
+      {FilteredList.length > 0 ? (
+        FilteredList.map((restaurant, index) => (
+          <RestaurantCard data={restaurant} key={index} />
+        ))
+      ) : (
+        <p>No restaurants available</p>
+      )}
+    </div>
+     {/* <div className="restaurant-list">
         {listOfRestaurant.length > 0 ? (
-          listOfRestaurant.map((restaurant,index) => (
+          FilteredList.map((restaurant,index) => (
             <RestaurantCard data={restaurant}
               key={index} />
-
           ))
         ) : (
           <p>No restaurants available</p>
         )}
-      </div>
+      </div> */}
     </>
   );
 };
 
 export default Body;
+

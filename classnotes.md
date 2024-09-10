@@ -1,36 +1,37 @@
--folder structure put comp inside src>> component folder
--create sepreate file for separate comp
--Read file structure on reactjsdotorg
-- apni marzi se dev friendly create krte hai project
-- First Letter should be Capital usually and import it in app js >> import 
 
-- before import we need to export components 
-  - export default <componentname>
-  - then import that component inside appdotjs/main file (import <comp> from "./components/Header")
-  - Never put hard coded data in app (utils folder is used)
-  - Named export to exprt for more than one thing from a single file (Name component)
- 
-Two types of Export/Import 
+useEffect(()=> {
+},[]);
 
---Default Export/Import--
+UseEffect by defaults get calls everytimes its render 
 
-export default component;
-import componentName from "path";
+callback is mandatory,array is not.
 
---Named Export/Import--
-export const component
-import {component} from "path";
+--if no array => useEffect will called after every render of component 
 
-#React Hooks (Js utilities functions)
- -useState()
- -useEffect()
+--if theres empty array useEffect will be called on initial render & just once.
 
-"whenever the states variable changes react renders the component"
+--if the dependancy array is state its render only on state updates
 
-read react fiber 
-react reconcilation
-compiler  etc
+// To create paths we using react router dom 
+
+import createBrowserRouter from react-router-dom
+
+const appRouter = createBrowserRouter ([
+    {
+    path:"/"
+    element:<AppLayout/>
+    },
+    {
+        path:"/component name",
+        element:<PassComponent/>
+    }
+])
+
+- child routing done by outlet, import and use it in app
+
+- put it inside children array in the same key value pair method 
+
+```SPA - React is known as single page application cos its redenrs comp from single page and doesnt reload/refresh the entire page. 
+we use client site render in this method. ```
 
 
-   
- 
