@@ -5,6 +5,13 @@ export const IMG_CDN = "https://media-assets.swiggy.com/swiggy/image/upload/fl_l
 
 export const GET_RES_API_URL = "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING";
 
+
+export const GET_MENU_API_URL =
+"https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.65420&lng=77.23730&restaurantId=425&submitAction=Enter";
+
+// https://www.swiggy.com/dapi/menu?page-type=REGULAR_MENU&complete-menu=true&lat=21.1702401&lng=72.83106070000001&&submitAction=ENTER&restaurantId=
+
+
 export const restaurantList = [
   {
     type: "restaurant",

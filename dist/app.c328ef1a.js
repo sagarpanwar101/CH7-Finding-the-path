@@ -28912,1173 +28912,7 @@ if ("development" === 'production') {
 }
 },{"react-dom":"node_modules/react-dom/index.js"}],"assests/images/logofoodsite.png":[function(require,module,exports) {
 module.exports = "/logofoodsite.98229317.png";
-},{}],"src/components/Header.jsx":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _react = _interopRequireWildcard(require("react"));
-var _logofoodsite = _interopRequireDefault(require("../../assests/images/logofoodsite.png"));
-function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
-function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function (e) { return e ? t : r; })(e); }
-function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; if (null === e || "object" != typeof e && "function" != typeof e) return { default: e }; var t = _getRequireWildcardCache(r); if (t && t.has(e)) return t.get(e); var n = { __proto__: null }, a = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var u in e) if ("default" !== u && {}.hasOwnProperty.call(e, u)) { var i = a ? Object.getOwnPropertyDescriptor(e, u) : null; i && (i.get || i.set) ? Object.defineProperty(n, u, i) : n[u] = e[u]; } return n.default = e, t && t.set(e, n), n; }
-function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
-function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
-function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
-function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
-var Title = function Title() {
-  return /*#__PURE__*/_react.default.createElement("img", {
-    className: "logo",
-    alt: "logo",
-    src: _logofoodsite.default
-  });
-};
-var NavComponent = function NavComponent() {
-  var _useState = (0, _react.useState)("Login"),
-    _useState2 = _slicedToArray(_useState, 2),
-    btnNameReact = _useState2[0],
-    setbtnNameReact = _useState2[1];
-  return /*#__PURE__*/_react.default.createElement("div", {
-    className: "nav-items"
-  }, /*#__PURE__*/_react.default.createElement("ul", null, /*#__PURE__*/_react.default.createElement("li", null, "Home"), /*#__PURE__*/_react.default.createElement("li", null, "About"), /*#__PURE__*/_react.default.createElement("li", null, "Contact"), /*#__PURE__*/_react.default.createElement("li", null, "Cart"), /*#__PURE__*/_react.default.createElement("button", {
-    className: "loginBtn",
-    onClick: function onClick() {
-      btnNameReact === "Login" ? setbtnNameReact("Logout") : setbtnNameReact("Login");
-    }
-  }, " ", btnNameReact)));
-};
-var Header = function Header() {
-  return /*#__PURE__*/_react.default.createElement("div", {
-    className: "header"
-  }, /*#__PURE__*/_react.default.createElement(Title, null), /*#__PURE__*/_react.default.createElement(NavComponent, null));
-};
-var _default = exports.default = Header;
-},{"react":"node_modules/react/index.js","../../assests/images/logofoodsite.png":"assests/images/logofoodsite.png"}],"src/components/config.jsx":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.restaurantList = exports.IMG_CDN = exports.GET_RES_API_URL = void 0;
-//Config Driven UI - Mock Data from API
-
-var IMG_CDN = exports.IMG_CDN = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/";
-var GET_RES_API_URL = exports.GET_RES_API_URL = "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING";
-var restaurantList = exports.restaurantList = [{
-  type: "restaurant",
-  data: {
-    type: "F",
-    id: "73011",
-    name: "KFC",
-    uuid: "27ff4155-fe46-418e-9862-ab98953bf953",
-    city: "22",
-    area: "Anand Vihar Colony",
-    totalRatingsString: "5000+ ratings",
-    cloudinaryImageId: "bdcd233971b7c81bf77e1fa4471280eb",
-    cuisines: ["American", "Snacks", "Biryani"],
-    tags: [],
-    costForTwo: 30000,
-    costForTwoString: "₹300 FOR TWO",
-    deliveryTime: 31,
-    minDeliveryTime: 31,
-    maxDeliveryTime: 31,
-    slaString: "31 MINS",
-    lastMileTravel: 6.199999809265137,
-    slugs: {
-      restaurant: "kfc-chukkuwala-chukkuwala",
-      city: "dehradun"
-    },
-    cityState: "22",
-    address: "KFC Restaurant, Khasra No 1281/1291, Opp Dr Manish Jain hospital, Chakrata road, Dehradun-248001",
-    locality: "Clock Tower",
-    parentId: 547,
-    unserviceable: false,
-    veg: false,
-    select: false,
-    favorite: false,
-    tradeCampaignHeaders: [],
-    aggregatedDiscountInfo: {
-      header: "50% off",
-      shortDescriptionList: [{
-        meta: "50% off | Use WELCOME50",
-        discountType: "Percentage",
-        operationType: "RESTAURANT"
-      }],
-      descriptionList: [{
-        meta: "50% off up to ₹100 | Use code WELCOME50",
-        discountType: "Percentage",
-        operationType: "RESTAURANT"
-      }],
-      subHeader: "",
-      headerType: 0,
-      superFreedel: ""
-    },
-    aggregatedDiscountInfoV2: {
-      header: "50% OFF",
-      shortDescriptionList: [{
-        meta: "Use WELCOME50",
-        discountType: "Percentage",
-        operationType: "RESTAURANT"
-      }],
-      descriptionList: [{
-        meta: "50% off up to ₹100 | Use code WELCOME50",
-        discountType: "Percentage",
-        operationType: "RESTAURANT"
-      }],
-      subHeader: "",
-      headerType: 0,
-      superFreedel: ""
-    },
-    ribbon: [{
-      type: "PROMOTED"
-    }],
-    chain: [],
-    feeDetails: {
-      fees: [],
-      totalFees: 0,
-      message: "",
-      title: "",
-      amount: "",
-      icon: ""
-    },
-    availability: {
-      opened: true,
-      nextOpenMessage: "",
-      nextCloseMessage: ""
-    },
-    longDistanceEnabled: 0,
-    rainMode: "NONE",
-    thirdPartyAddress: false,
-    thirdPartyVendor: "",
-    adTrackingID: "cid=5698075~p=1~eid=00000185-8b09-7c92-0e51-a04b00dc0124",
-    badges: {
-      imageBased: [],
-      textBased: [],
-      textExtendedBadges: []
-    },
-    lastMileTravelString: "6.1 kms",
-    hasSurge: false,
-    sla: {
-      restaurantId: "73011",
-      deliveryTime: 31,
-      minDeliveryTime: 31,
-      maxDeliveryTime: 31,
-      lastMileTravel: 6.199999809265137,
-      lastMileDistance: 0,
-      serviceability: "SERVICEABLE",
-      rainMode: "NONE",
-      longDistance: "NOT_LONG_DISTANCE",
-      preferentialService: false,
-      iconType: "EMPTY"
-    },
-    promoted: true,
-    avgRating: "4.2",
-    totalRatings: 5000,
-    new: false
-  },
-  subtype: "basic"
-}, {
-  type: "restaurant",
-  data: {
-    type: "F",
-    id: "542132",
-    name: "Domnik Pizza",
-    uuid: "f2ee37f5-9ab0-4903-9420-6cae020b0a38",
-    city: "22",
-    area: "Majra    Bansal Home",
-    totalRatingsString: "50+ ratings",
-    cloudinaryImageId: "sboh9oor0cvp6ztsyhvj",
-    cuisines: ["Pizzas", "Italian", "Fast Food", "Snacks", "Beverages"],
-    tags: [],
-    costForTwo: 30000,
-    costForTwoString: "₹300 FOR TWO",
-    deliveryTime: 33,
-    minDeliveryTime: 33,
-    maxDeliveryTime: 33,
-    slaString: "33 MINS",
-    lastMileTravel: 0.6000000238418579,
-    slugs: {
-      restaurant: "domnik-pizza-patel-nagar-patel-nagar-2",
-      city: "dehradun"
-    },
-    cityState: "22",
-    address: "28/3 Sewala Chandravani Road, Arcedia Grant, Dehradun Rural, Dehradun, Uttarakhand",
-    locality: "Patel Nagar",
-    parentId: 22321,
-    unserviceable: false,
-    veg: false,
-    select: false,
-    favorite: false,
-    tradeCampaignHeaders: [],
-    aggregatedDiscountInfo: {
-      header: "50% off",
-      shortDescriptionList: [{
-        meta: "50% off | Use WELCOME50",
-        discountType: "Percentage",
-        operationType: "RESTAURANT"
-      }],
-      descriptionList: [{
-        meta: "50% off up to ₹100 | Use code WELCOME50",
-        discountType: "Percentage",
-        operationType: "RESTAURANT"
-      }],
-      subHeader: "",
-      headerType: 0,
-      superFreedel: ""
-    },
-    aggregatedDiscountInfoV2: {
-      header: "50% OFF",
-      shortDescriptionList: [{
-        meta: "Use WELCOME50",
-        discountType: "Percentage",
-        operationType: "RESTAURANT"
-      }],
-      descriptionList: [{
-        meta: "50% off up to ₹100 | Use code WELCOME50",
-        discountType: "Percentage",
-        operationType: "RESTAURANT"
-      }],
-      subHeader: "",
-      headerType: 0,
-      superFreedel: ""
-    },
-    chain: [],
-    feeDetails: {
-      fees: [],
-      totalFees: 0,
-      message: "",
-      title: "",
-      amount: "",
-      icon: ""
-    },
-    availability: {
-      opened: true,
-      nextOpenMessage: "",
-      nextCloseMessage: ""
-    },
-    longDistanceEnabled: 0,
-    rainMode: "NONE",
-    thirdPartyAddress: false,
-    thirdPartyVendor: "",
-    adTrackingID: "",
-    badges: {
-      imageBased: [],
-      textBased: [],
-      textExtendedBadges: []
-    },
-    lastMileTravelString: "0.6 kms",
-    hasSurge: false,
-    sla: {
-      restaurantId: "542132",
-      deliveryTime: 33,
-      minDeliveryTime: 33,
-      maxDeliveryTime: 33,
-      lastMileTravel: 0.6000000238418579,
-      lastMileDistance: 0,
-      serviceability: "SERVICEABLE",
-      rainMode: "NONE",
-      longDistance: "NOT_LONG_DISTANCE",
-      preferentialService: false,
-      iconType: "EMPTY"
-    },
-    promoted: false,
-    avgRating: "3.9",
-    totalRatings: 50,
-    new: false
-  },
-  subtype: "basic"
-}, {
-  type: "restaurant",
-  data: {
-    type: "F",
-    id: "321517",
-    name: "FOOD PLANET RESTAURANT",
-    uuid: "899d5dd4-200a-48b2-a321-391bb9486ec2",
-    city: "22",
-    area: "Majra",
-    totalRatingsString: "50+ ratings",
-    cloudinaryImageId: "ykboewqeoxnne8fgrnui",
-    cuisines: ["Indian", "Chinese", "Tandoor", "Thalis", "Fast Food"],
-    tags: [],
-    costForTwo: 20000,
-    costForTwoString: "₹200 FOR TWO",
-    deliveryTime: 25,
-    minDeliveryTime: 25,
-    maxDeliveryTime: 25,
-    slaString: "25 MINS",
-    lastMileTravel: 0.699999988079071,
-    slugs: {
-      restaurant: "food-planet-restaurant-patel-nagar-patel-nagar",
-      city: "dehradun"
-    },
-    cityState: "22",
-    address: "157/11, Chandra Parisar Chandra Bani Rd, Ekta Enclave, Doon Enclave, Majra, Dehradun, Uttarakhand 248171",
-    locality: "Patel Nagar",
-    parentId: 81850,
-    unserviceable: false,
-    veg: false,
-    select: false,
-    favorite: false,
-    tradeCampaignHeaders: [],
-    aggregatedDiscountInfo: {
-      header: "50% off",
-      shortDescriptionList: [{
-        meta: "50% off | Use WELCOME50",
-        discountType: "Percentage",
-        operationType: "RESTAURANT"
-      }],
-      descriptionList: [{
-        meta: "50% off up to ₹100 | Use code WELCOME50",
-        discountType: "Percentage",
-        operationType: "RESTAURANT"
-      }],
-      subHeader: "",
-      headerType: 0,
-      superFreedel: ""
-    },
-    aggregatedDiscountInfoV2: {
-      header: "50% OFF",
-      shortDescriptionList: [{
-        meta: "Use WELCOME50",
-        discountType: "Percentage",
-        operationType: "RESTAURANT"
-      }],
-      descriptionList: [{
-        meta: "50% off up to ₹100 | Use code WELCOME50",
-        discountType: "Percentage",
-        operationType: "RESTAURANT"
-      }],
-      subHeader: "",
-      headerType: 0,
-      superFreedel: ""
-    },
-    chain: [],
-    feeDetails: {
-      fees: [],
-      totalFees: 0,
-      message: "",
-      title: "",
-      amount: "",
-      icon: ""
-    },
-    availability: {
-      opened: true,
-      nextOpenMessage: "",
-      nextCloseMessage: ""
-    },
-    longDistanceEnabled: 0,
-    rainMode: "NONE",
-    thirdPartyAddress: false,
-    thirdPartyVendor: "",
-    adTrackingID: "",
-    badges: {
-      imageBased: [],
-      textBased: [],
-      textExtendedBadges: []
-    },
-    lastMileTravelString: "0.6 kms",
-    hasSurge: false,
-    sla: {
-      restaurantId: "321517",
-      deliveryTime: 25,
-      minDeliveryTime: 25,
-      maxDeliveryTime: 25,
-      lastMileTravel: 0.699999988079071,
-      lastMileDistance: 0,
-      serviceability: "SERVICEABLE",
-      rainMode: "NONE",
-      longDistance: "NOT_LONG_DISTANCE",
-      preferentialService: false,
-      iconType: "EMPTY"
-    },
-    promoted: false,
-    avgRating: "2.8",
-    totalRatings: 50,
-    new: false
-  },
-  subtype: "basic"
-}, {
-  type: "restaurant",
-  data: {
-    type: "F",
-    id: "311806",
-    name: "Burger King",
-    uuid: "162a4dc4-50de-452a-82cf-751e18ac9952",
-    city: "22",
-    area: "Anand Vihar Colony",
-    totalRatingsString: "5000+ ratings",
-    cloudinaryImageId: "iqh7ew5ldfgvpd5dpz60",
-    cuisines: ["Burgers", "American"],
-    tags: [],
-    costForTwo: 35000,
-    costForTwoString: "₹350 FOR TWO",
-    deliveryTime: 39,
-    minDeliveryTime: 39,
-    maxDeliveryTime: 39,
-    slaString: "39 MINS",
-    lastMileTravel: 6.300000190734863,
-    slugs: {
-      restaurant: "burger-king-chakrata-road-ballupur",
-      city: "dehradun"
-    },
-    cityState: "22",
-    address: "5/5,4/4 & 3/3, GROUND FLOOR, CHAKRATA ROAD, DEHRADUN, UTTRAKHAND",
-    locality: "CHAKRATA ROAD",
-    parentId: 166,
-    unserviceable: false,
-    veg: false,
-    select: false,
-    favorite: false,
-    tradeCampaignHeaders: [],
-    aggregatedDiscountInfo: {
-      header: "60% off",
-      shortDescriptionList: [{
-        meta: "60% off | Use STEALDEAL",
-        discountType: "Percentage",
-        operationType: "RESTAURANT"
-      }],
-      descriptionList: [{
-        meta: "60% off up to ₹120 | Use code STEALDEAL",
-        discountType: "Percentage",
-        operationType: "RESTAURANT"
-      }],
-      subHeader: "",
-      headerType: 0,
-      superFreedel: ""
-    },
-    aggregatedDiscountInfoV2: {
-      header: "60% OFF",
-      shortDescriptionList: [{
-        meta: "Use STEALDEAL",
-        discountType: "Percentage",
-        operationType: "RESTAURANT"
-      }],
-      descriptionList: [{
-        meta: "60% off up to ₹120 | Use code STEALDEAL",
-        discountType: "Percentage",
-        operationType: "RESTAURANT"
-      }],
-      subHeader: "",
-      headerType: 0,
-      superFreedel: ""
-    },
-    ribbon: [{
-      type: "PROMOTED"
-    }],
-    chain: [],
-    feeDetails: {
-      fees: [],
-      totalFees: 0,
-      message: "",
-      title: "",
-      amount: "",
-      icon: ""
-    },
-    availability: {
-      opened: true,
-      nextOpenMessage: "",
-      nextCloseMessage: ""
-    },
-    longDistanceEnabled: 0,
-    rainMode: "NONE",
-    thirdPartyAddress: false,
-    thirdPartyVendor: "",
-    adTrackingID: "cid=5700193~p=4~eid=00000185-8b09-7c92-0e51-a04c00dc0405",
-    badges: {
-      imageBased: [],
-      textBased: [],
-      textExtendedBadges: []
-    },
-    lastMileTravelString: "6.3 kms",
-    hasSurge: false,
-    sla: {
-      restaurantId: "311806",
-      deliveryTime: 39,
-      minDeliveryTime: 39,
-      maxDeliveryTime: 39,
-      lastMileTravel: 6.300000190734863,
-      lastMileDistance: 0,
-      serviceability: "SERVICEABLE",
-      rainMode: "NONE",
-      longDistance: "NOT_LONG_DISTANCE",
-      preferentialService: false,
-      iconType: "EMPTY"
-    },
-    promoted: true,
-    avgRating: "3.2",
-    totalRatings: 5000,
-    new: false
-  },
-  subtype: "basic"
-}, {
-  type: "restaurant",
-  data: {
-    type: "F",
-    id: "132460",
-    name: "Annapurna Andhra Mess",
-    uuid: "c6460418-904b-4371-9e04-0ce8b1b46cae",
-    city: "22",
-    area: "Dehradun",
-    totalRatingsString: "1000+ ratings",
-    cloudinaryImageId: "zw4qx2szsy9kbszk9n3d",
-    cuisines: ["South Indian", "Biryani", "North Indian"],
-    tags: [],
-    costForTwo: 20000,
-    costForTwoString: "₹200 FOR TWO",
-    deliveryTime: 25,
-    minDeliveryTime: 25,
-    maxDeliveryTime: 25,
-    slaString: "25 MINS",
-    lastMileTravel: 1.399999976158142,
-    slugs: {
-      restaurant: "annapurna-andhra-mess-subhash-nagar-subhash-nagar",
-      city: "dehradun"
-    },
-    cityState: "22",
-    address: "keshav enclave sewla khurd chandrabani road behind uttranchal PG college",
-    locality: "Patel Nagar",
-    parentId: 33997,
-    unserviceable: false,
-    veg: false,
-    select: false,
-    favorite: false,
-    tradeCampaignHeaders: [],
-    aggregatedDiscountInfo: {
-      header: "50% off",
-      shortDescriptionList: [{
-        meta: "50% off | Use WELCOME50",
-        discountType: "Percentage",
-        operationType: "RESTAURANT"
-      }],
-      descriptionList: [{
-        meta: "50% off up to ₹100 | Use code WELCOME50",
-        discountType: "Percentage",
-        operationType: "RESTAURANT"
-      }],
-      subHeader: "",
-      headerType: 0,
-      superFreedel: ""
-    },
-    aggregatedDiscountInfoV2: {
-      header: "50% OFF",
-      shortDescriptionList: [{
-        meta: "Use WELCOME50",
-        discountType: "Percentage",
-        operationType: "RESTAURANT"
-      }],
-      descriptionList: [{
-        meta: "50% off up to ₹100 | Use code WELCOME50",
-        discountType: "Percentage",
-        operationType: "RESTAURANT"
-      }],
-      subHeader: "",
-      headerType: 0,
-      superFreedel: ""
-    },
-    chain: [],
-    feeDetails: {
-      fees: [],
-      totalFees: 0,
-      message: "",
-      title: "",
-      amount: "",
-      icon: ""
-    },
-    availability: {
-      opened: true,
-      nextOpenMessage: "",
-      nextCloseMessage: ""
-    },
-    longDistanceEnabled: 0,
-    rainMode: "NONE",
-    thirdPartyAddress: false,
-    thirdPartyVendor: "",
-    adTrackingID: "",
-    badges: {
-      imageBased: [],
-      textBased: [],
-      textExtendedBadges: []
-    },
-    lastMileTravelString: "1.3 kms",
-    hasSurge: false,
-    sla: {
-      restaurantId: "132460",
-      deliveryTime: 25,
-      minDeliveryTime: 25,
-      maxDeliveryTime: 25,
-      lastMileTravel: 1.399999976158142,
-      lastMileDistance: 0,
-      serviceability: "SERVICEABLE",
-      rainMode: "NONE",
-      longDistance: "NOT_LONG_DISTANCE",
-      preferentialService: false,
-      iconType: "EMPTY"
-    },
-    promoted: false,
-    avgRating: "4.0",
-    totalRatings: 1000,
-    new: false
-  },
-  subtype: "basic"
-}, {
-  type: "restaurant",
-  data: {
-    type: "F",
-    id: "496677",
-    name: "Uncle Ji Restaurant",
-    uuid: "e652ab57-22c2-4226-b5ea-a5caa26ee0f8",
-    city: "22",
-    area: "Patel Nagar",
-    totalRatingsString: "Too Few Ratings",
-    cloudinaryImageId: "kx2ghnwagcnqjtmd5jbc",
-    cuisines: ["North Indian", "Snacks", "Beverages"],
-    tags: [],
-    costForTwo: 30000,
-    costForTwoString: "₹300 FOR TWO",
-    deliveryTime: 31,
-    minDeliveryTime: 31,
-    maxDeliveryTime: 31,
-    slaString: "31 MINS",
-    lastMileTravel: 0.800000011920929,
-    slugs: {
-      restaurant: "uncle-ji-restaurant-patel-nagar-patel-nagar",
-      city: "dehradun"
-    },
-    cityState: "22",
-    address: "348 santosh tower, majra road gram majra dehradun 248001",
-    locality: "Patel Nagar",
-    parentId: 298209,
-    unserviceable: false,
-    veg: false,
-    select: false,
-    favorite: false,
-    tradeCampaignHeaders: [],
-    aggregatedDiscountInfo: {
-      header: "50% off",
-      shortDescriptionList: [{
-        meta: "50% off | Use WELCOME50",
-        discountType: "Percentage",
-        operationType: "RESTAURANT"
-      }],
-      descriptionList: [{
-        meta: "50% off up to ₹100 | Use code WELCOME50",
-        discountType: "Percentage",
-        operationType: "RESTAURANT"
-      }],
-      subHeader: "",
-      headerType: 0,
-      superFreedel: ""
-    },
-    aggregatedDiscountInfoV2: {
-      header: "50% OFF",
-      shortDescriptionList: [{
-        meta: "Use WELCOME50",
-        discountType: "Percentage",
-        operationType: "RESTAURANT"
-      }],
-      descriptionList: [{
-        meta: "50% off up to ₹100 | Use code WELCOME50",
-        discountType: "Percentage",
-        operationType: "RESTAURANT"
-      }],
-      subHeader: "",
-      headerType: 0,
-      superFreedel: ""
-    },
-    chain: [],
-    feeDetails: {
-      fees: [],
-      totalFees: 0,
-      message: "",
-      title: "",
-      amount: "",
-      icon: ""
-    },
-    availability: {
-      opened: true,
-      nextOpenMessage: "",
-      nextCloseMessage: ""
-    },
-    longDistanceEnabled: 0,
-    rainMode: "NONE",
-    thirdPartyAddress: false,
-    thirdPartyVendor: "",
-    adTrackingID: "",
-    badges: {
-      imageBased: [],
-      textBased: [],
-      textExtendedBadges: []
-    },
-    lastMileTravelString: "0.8 kms",
-    hasSurge: false,
-    sla: {
-      restaurantId: "496677",
-      deliveryTime: 31,
-      minDeliveryTime: 31,
-      maxDeliveryTime: 31,
-      lastMileTravel: 0.800000011920929,
-      lastMileDistance: 0,
-      serviceability: "SERVICEABLE",
-      rainMode: "NONE",
-      longDistance: "NOT_LONG_DISTANCE",
-      preferentialService: false,
-      iconType: "EMPTY"
-    },
-    promoted: false,
-    avgRating: "4.9",
-    totalRatings: 0,
-    new: false
-  },
-  subtype: "basic"
-}];
-},{}],"src/components/RestaurantCard.jsx":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _react = _interopRequireDefault(require("react"));
-var _config = require("../components/config");
-function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
-// import imgCdn 
-
-var RestaurantCard = function RestaurantCard(_ref) {
-  var _data$info, _data$info2, _data$info3;
-  var data = _ref.data;
-  return /*#__PURE__*/_react.default.createElement("div", {
-    className: "card"
-  }, /*#__PURE__*/_react.default.createElement("img", {
-    src: _config.IMG_CDN + (data === null || data === void 0 || (_data$info = data.info) === null || _data$info === void 0 ? void 0 : _data$info.cloudinaryImageId),
-    alt: data === null || data === void 0 ? void 0 : data.info
-  }), /*#__PURE__*/_react.default.createElement("span", {
-    className: "card-title"
-  }, data === null || data === void 0 || (_data$info2 = data.info) === null || _data$info2 === void 0 ? void 0 : _data$info2.name), /*#__PURE__*/_react.default.createElement("span", {
-    className: "card-tags"
-  }, data === null || data === void 0 ? void 0 : data.info.cuisines.join(", ")), /*#__PURE__*/_react.default.createElement("span", {
-    className: "card-rating"
-  }, data === null || data === void 0 || (_data$info3 = data.info) === null || _data$info3 === void 0 ? void 0 : _data$info3.avgRating));
-};
-var _default = exports.default = RestaurantCard;
-},{"react":"node_modules/react/index.js","../components/config":"src/components/config.jsx"}],"src/components/Shimmer.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _react = _interopRequireDefault(require("react"));
-function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
-var ShimmerCard = function ShimmerCard() {
-  return /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-container"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmercard"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-img"
-  }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-title"
-  }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-tags"
-  }, " "), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-details"
-  })), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmercard"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-img"
-  }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-title"
-  }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-tags"
-  }, " "), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-details"
-  })), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmercard"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-img"
-  }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-title"
-  }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-tags"
-  }, " "), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-details"
-  })), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmercard"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-img"
-  }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-title"
-  }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-tags"
-  }, " "), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-details"
-  })), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmercard"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-img"
-  }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-title"
-  }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-tags"
-  }, " "), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-details"
-  })), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmercard"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-img"
-  }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-title"
-  }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-tags"
-  }, " "), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-details"
-  })), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmercard"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-img"
-  }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-title"
-  }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-tags"
-  }, " "), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-details"
-  })), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmercard"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-img"
-  }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-title"
-  }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-tags"
-  }, " "), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-details"
-  })), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmercard"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-img"
-  }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-title"
-  }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-tags"
-  }, " "), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-details"
-  })), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmercard"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-img"
-  }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-title"
-  }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-tags"
-  }, " "), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-details"
-  })), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmercard"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-img"
-  }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-title"
-  }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-tags"
-  }, " "), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-details"
-  })), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmercard"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-img"
-  }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-title"
-  }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-tags"
-  }, " "), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-details"
-  })), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmercard"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-img"
-  }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-title"
-  }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-tags"
-  }, " "), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-details"
-  })), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmercard"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-img"
-  }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-title"
-  }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-tags"
-  }, " "), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-details"
-  })), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmercard"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-img"
-  }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-title"
-  }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-tags"
-  }, " "), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-details"
-  })), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmercard"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-img"
-  }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-title"
-  }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-tags"
-  }, " "), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-details"
-  })), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmercard"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-img"
-  }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-title"
-  }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-tags"
-  }, " "), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-details"
-  })), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmercard"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-img"
-  }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-title"
-  }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-tags"
-  }, " "), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-details"
-  })), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmercard"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-img"
-  }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-title"
-  }), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-tags"
-  }, " "), /*#__PURE__*/_react.default.createElement("div", {
-    className: "shimmer-details"
-  })));
-};
-var _default = exports.default = ShimmerCard;
-},{"react":"node_modules/react/index.js"}],"src/components/Body.jsx":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _react = _interopRequireWildcard(require("react"));
-var _config = require("../components/config");
-var _RestaurantCard = _interopRequireDefault(require("../components/RestaurantCard"));
-var _Shimmer = _interopRequireDefault(require("../components/Shimmer"));
-function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
-function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function (e) { return e ? t : r; })(e); }
-function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; if (null === e || "object" != typeof e && "function" != typeof e) return { default: e }; var t = _getRequireWildcardCache(r); if (t && t.has(e)) return t.get(e); var n = { __proto__: null }, a = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var u in e) if ("default" !== u && {}.hasOwnProperty.call(e, u)) { var i = a ? Object.getOwnPropertyDescriptor(e, u) : null; i && (i.get || i.set) ? Object.defineProperty(n, u, i) : n[u] = e[u]; } return n.default = e, t && t.set(e, n), n; }
-function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
-function _regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ _regeneratorRuntime = function _regeneratorRuntime() { return e; }; var t, e = {}, r = Object.prototype, n = r.hasOwnProperty, o = Object.defineProperty || function (t, e, r) { t[e] = r.value; }, i = "function" == typeof Symbol ? Symbol : {}, a = i.iterator || "@@iterator", c = i.asyncIterator || "@@asyncIterator", u = i.toStringTag || "@@toStringTag"; function define(t, e, r) { return Object.defineProperty(t, e, { value: r, enumerable: !0, configurable: !0, writable: !0 }), t[e]; } try { define({}, ""); } catch (t) { define = function define(t, e, r) { return t[e] = r; }; } function wrap(t, e, r, n) { var i = e && e.prototype instanceof Generator ? e : Generator, a = Object.create(i.prototype), c = new Context(n || []); return o(a, "_invoke", { value: makeInvokeMethod(t, r, c) }), a; } function tryCatch(t, e, r) { try { return { type: "normal", arg: t.call(e, r) }; } catch (t) { return { type: "throw", arg: t }; } } e.wrap = wrap; var h = "suspendedStart", l = "suspendedYield", f = "executing", s = "completed", y = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var p = {}; define(p, a, function () { return this; }); var d = Object.getPrototypeOf, v = d && d(d(values([]))); v && v !== r && n.call(v, a) && (p = v); var g = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(p); function defineIteratorMethods(t) { ["next", "throw", "return"].forEach(function (e) { define(t, e, function (t) { return this._invoke(e, t); }); }); } function AsyncIterator(t, e) { function invoke(r, o, i, a) { var c = tryCatch(t[r], t, o); if ("throw" !== c.type) { var u = c.arg, h = u.value; return h && "object" == _typeof(h) && n.call(h, "__await") ? e.resolve(h.__await).then(function (t) { invoke("next", t, i, a); }, function (t) { invoke("throw", t, i, a); }) : e.resolve(h).then(function (t) { u.value = t, i(u); }, function (t) { return invoke("throw", t, i, a); }); } a(c.arg); } var r; o(this, "_invoke", { value: function value(t, n) { function callInvokeWithMethodAndArg() { return new e(function (e, r) { invoke(t, n, e, r); }); } return r = r ? r.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); } }); } function makeInvokeMethod(e, r, n) { var o = h; return function (i, a) { if (o === f) throw Error("Generator is already running"); if (o === s) { if ("throw" === i) throw a; return { value: t, done: !0 }; } for (n.method = i, n.arg = a;;) { var c = n.delegate; if (c) { var u = maybeInvokeDelegate(c, n); if (u) { if (u === y) continue; return u; } } if ("next" === n.method) n.sent = n._sent = n.arg;else if ("throw" === n.method) { if (o === h) throw o = s, n.arg; n.dispatchException(n.arg); } else "return" === n.method && n.abrupt("return", n.arg); o = f; var p = tryCatch(e, r, n); if ("normal" === p.type) { if (o = n.done ? s : l, p.arg === y) continue; return { value: p.arg, done: n.done }; } "throw" === p.type && (o = s, n.method = "throw", n.arg = p.arg); } }; } function maybeInvokeDelegate(e, r) { var n = r.method, o = e.iterator[n]; if (o === t) return r.delegate = null, "throw" === n && e.iterator.return && (r.method = "return", r.arg = t, maybeInvokeDelegate(e, r), "throw" === r.method) || "return" !== n && (r.method = "throw", r.arg = new TypeError("The iterator does not provide a '" + n + "' method")), y; var i = tryCatch(o, e.iterator, r.arg); if ("throw" === i.type) return r.method = "throw", r.arg = i.arg, r.delegate = null, y; var a = i.arg; return a ? a.done ? (r[e.resultName] = a.value, r.next = e.nextLoc, "return" !== r.method && (r.method = "next", r.arg = t), r.delegate = null, y) : a : (r.method = "throw", r.arg = new TypeError("iterator result is not an object"), r.delegate = null, y); } function pushTryEntry(t) { var e = { tryLoc: t[0] }; 1 in t && (e.catchLoc = t[1]), 2 in t && (e.finallyLoc = t[2], e.afterLoc = t[3]), this.tryEntries.push(e); } function resetTryEntry(t) { var e = t.completion || {}; e.type = "normal", delete e.arg, t.completion = e; } function Context(t) { this.tryEntries = [{ tryLoc: "root" }], t.forEach(pushTryEntry, this), this.reset(!0); } function values(e) { if (e || "" === e) { var r = e[a]; if (r) return r.call(e); if ("function" == typeof e.next) return e; if (!isNaN(e.length)) { var o = -1, i = function next() { for (; ++o < e.length;) if (n.call(e, o)) return next.value = e[o], next.done = !1, next; return next.value = t, next.done = !0, next; }; return i.next = i; } } throw new TypeError(_typeof(e) + " is not iterable"); } return GeneratorFunction.prototype = GeneratorFunctionPrototype, o(g, "constructor", { value: GeneratorFunctionPrototype, configurable: !0 }), o(GeneratorFunctionPrototype, "constructor", { value: GeneratorFunction, configurable: !0 }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, u, "GeneratorFunction"), e.isGeneratorFunction = function (t) { var e = "function" == typeof t && t.constructor; return !!e && (e === GeneratorFunction || "GeneratorFunction" === (e.displayName || e.name)); }, e.mark = function (t) { return Object.setPrototypeOf ? Object.setPrototypeOf(t, GeneratorFunctionPrototype) : (t.__proto__ = GeneratorFunctionPrototype, define(t, u, "GeneratorFunction")), t.prototype = Object.create(g), t; }, e.awrap = function (t) { return { __await: t }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, c, function () { return this; }), e.AsyncIterator = AsyncIterator, e.async = function (t, r, n, o, i) { void 0 === i && (i = Promise); var a = new AsyncIterator(wrap(t, r, n, o), i); return e.isGeneratorFunction(r) ? a : a.next().then(function (t) { return t.done ? t.value : a.next(); }); }, defineIteratorMethods(g), define(g, u, "Generator"), define(g, a, function () { return this; }), define(g, "toString", function () { return "[object Generator]"; }), e.keys = function (t) { var e = Object(t), r = []; for (var n in e) r.push(n); return r.reverse(), function next() { for (; r.length;) { var t = r.pop(); if (t in e) return next.value = t, next.done = !1, next; } return next.done = !0, next; }; }, e.values = values, Context.prototype = { constructor: Context, reset: function reset(e) { if (this.prev = 0, this.next = 0, this.sent = this._sent = t, this.done = !1, this.delegate = null, this.method = "next", this.arg = t, this.tryEntries.forEach(resetTryEntry), !e) for (var r in this) "t" === r.charAt(0) && n.call(this, r) && !isNaN(+r.slice(1)) && (this[r] = t); }, stop: function stop() { this.done = !0; var t = this.tryEntries[0].completion; if ("throw" === t.type) throw t.arg; return this.rval; }, dispatchException: function dispatchException(e) { if (this.done) throw e; var r = this; function handle(n, o) { return a.type = "throw", a.arg = e, r.next = n, o && (r.method = "next", r.arg = t), !!o; } for (var o = this.tryEntries.length - 1; o >= 0; --o) { var i = this.tryEntries[o], a = i.completion; if ("root" === i.tryLoc) return handle("end"); if (i.tryLoc <= this.prev) { var c = n.call(i, "catchLoc"), u = n.call(i, "finallyLoc"); if (c && u) { if (this.prev < i.catchLoc) return handle(i.catchLoc, !0); if (this.prev < i.finallyLoc) return handle(i.finallyLoc); } else if (c) { if (this.prev < i.catchLoc) return handle(i.catchLoc, !0); } else { if (!u) throw Error("try statement without catch or finally"); if (this.prev < i.finallyLoc) return handle(i.finallyLoc); } } } }, abrupt: function abrupt(t, e) { for (var r = this.tryEntries.length - 1; r >= 0; --r) { var o = this.tryEntries[r]; if (o.tryLoc <= this.prev && n.call(o, "finallyLoc") && this.prev < o.finallyLoc) { var i = o; break; } } i && ("break" === t || "continue" === t) && i.tryLoc <= e && e <= i.finallyLoc && (i = null); var a = i ? i.completion : {}; return a.type = t, a.arg = e, i ? (this.method = "next", this.next = i.finallyLoc, y) : this.complete(a); }, complete: function complete(t, e) { if ("throw" === t.type) throw t.arg; return "break" === t.type || "continue" === t.type ? this.next = t.arg : "return" === t.type ? (this.rval = this.arg = t.arg, this.method = "return", this.next = "end") : "normal" === t.type && e && (this.next = e), y; }, finish: function finish(t) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var r = this.tryEntries[e]; if (r.finallyLoc === t) return this.complete(r.completion, r.afterLoc), resetTryEntry(r), y; } }, catch: function _catch(t) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var r = this.tryEntries[e]; if (r.tryLoc === t) { var n = r.completion; if ("throw" === n.type) { var o = n.arg; resetTryEntry(r); } return o; } } throw Error("illegal catch attempt"); }, delegateYield: function delegateYield(e, r, n) { return this.delegate = { iterator: values(e), resultName: r, nextLoc: n }, "next" === this.method && (this.arg = t), y; } }, e; }
-function asyncGeneratorStep(n, t, e, r, o, a, c) { try { var i = n[a](c), u = i.value; } catch (n) { return void e(n); } i.done ? t(u) : Promise.resolve(u).then(r, o); }
-function _asyncToGenerator(n) { return function () { var t = this, e = arguments; return new Promise(function (r, o) { var a = n.apply(t, e); function _next(n) { asyncGeneratorStep(a, r, o, _next, _throw, "next", n); } function _throw(n) { asyncGeneratorStep(a, r, o, _next, _throw, "throw", n); } _next(void 0); }); }; }
-function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
-function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
-function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
-function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
-var Body = function Body() {
-  var _useState = (0, _react.useState)([]),
-    _useState2 = _slicedToArray(_useState, 2),
-    listOfRestaurant = _useState2[0],
-    setListOfRestaurant = _useState2[1];
-  var _useState3 = (0, _react.useState)([]),
-    _useState4 = _slicedToArray(_useState3, 2),
-    FilteredList = _useState4[0],
-    setFilteredList = _useState4[1];
-  var _useState5 = (0, _react.useState)(""),
-    _useState6 = _slicedToArray(_useState5, 2),
-    searchText = _useState6[0],
-    setSearchText = _useState6[1];
-  var _useState7 = (0, _react.useState)(false),
-    _useState8 = _slicedToArray(_useState7, 2),
-    loadingData = _useState8[0],
-    setLoadingData = _useState8[1];
-
-  // Filtering resturants based on search
-  var filterData = function filterData(newsearchText, restaurants) {
-    return restaurants.filter(function (restaurant) {
-      var _restaurant$info;
-      return restaurant === null || restaurant === void 0 || (_restaurant$info = restaurant.info) === null || _restaurant$info === void 0 ? void 0 : _restaurant$info.name.toLowerCase().includes(searchText.toLowerCase());
-    });
-  };
-
-  // Whenever react state updates, react triggers reconcilation cycle (re-renders the component)
-  (0, _react.useEffect)(function () {
-    fetchData();
-  }, []);
-
-  // fetch all the original resturants
-  var fetchData = /*#__PURE__*/function () {
-    var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
-      var _json$data, data, json, restList;
-      return _regeneratorRuntime().wrap(function _callee$(_context) {
-        while (1) switch (_context.prev = _context.next) {
-          case 0:
-            _context.prev = 0;
-            setLoadingData(true);
-            _context.next = 4;
-            return fetch(_config.GET_RES_API_URL);
-          case 4:
-            data = _context.sent;
-            _context.next = 7;
-            return data.json();
-          case 7:
-            json = _context.sent;
-            restList = []; // console.log(json.data);
-            json === null || json === void 0 || (_json$data = json.data) === null || _json$data === void 0 || _json$data.cards.forEach(function (value) {
-              var _value$card;
-              if (value !== null && value !== void 0 && (_value$card = value.card) !== null && _value$card !== void 0 && (_value$card = _value$card.card) !== null && _value$card !== void 0 && (_value$card = _value$card.gridElements) !== null && _value$card !== void 0 && (_value$card = _value$card.infoWithStyle) !== null && _value$card !== void 0 && _value$card.restaurants) {
-                var _value$card2;
-                value === null || value === void 0 || (_value$card2 = value.card) === null || _value$card2 === void 0 || (_value$card2 = _value$card2.card) === null || _value$card2 === void 0 || (_value$card2 = _value$card2.gridElements) === null || _value$card2 === void 0 || (_value$card2 = _value$card2.infoWithStyle) === null || _value$card2 === void 0 || _value$card2.restaurants.forEach(function (val) {
-                  restList.push(val);
-                });
-              }
-            });
-            // const restaurant = json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
-            if (restList) {
-              setListOfRestaurant(restList);
-              setLoadingData(false);
-              setFilteredList(restList);
-            }
-            _context.next = 16;
-            break;
-          case 13:
-            _context.prev = 13;
-            _context.t0 = _context["catch"](0);
-            console.error("Fetching errror::", _context.t0);
-          case 16:
-          case "end":
-            return _context.stop();
-        }
-      }, _callee, null, [[0, 13]]);
-    }));
-    return function fetchData() {
-      return _ref.apply(this, arguments);
-    };
-  }();
-  if (loadingData) {
-    return /*#__PURE__*/_react.default.createElement(_Shimmer.default, null);
-  }
-
-  // const handleSearch = (e) => {
-  //   setSearchText(e.target.value);
-  //   const filteredRestaurants = filterData(searchText, listOfRestaurant);
-  //   // console.log(filteredRestaurants);
-  //   setListOfRestaurant(filteredRestaurants);
-  // }
-
-  var handleSearch = function handleSearch(e) {
-    var newSearchText = e.target.value;
-    setSearchText(newSearchText);
-    var filteredRestaurants = filterData(newSearchText, listOfRestaurant);
-    setFilteredList(filteredRestaurants);
-  };
-
-  // filtering top rated
-
-  var handleFilter = function handleFilter() {
-    var filteredList = listOfRestaurant.filter(function (data) {
-      var _data$info;
-      return (data === null || data === void 0 || (_data$info = data.info) === null || _data$info === void 0 ? void 0 : _data$info.avgRating) >= 4.0;
-    });
-    setFilteredList(filteredList);
-  };
-
-  // const handleFilter = () => {
-  //   setLoadingData(true)
-  //   const filteredList = listOfRestaurant.filter(
-  //     (data) => data?.info?.avgRating >=4.0
-  //   );
-  //   setLoadingData(false)
-  //   setListOfRestaurant(filteredList);
-  // }
-
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
-    className: "search-container"
-  }, /*#__PURE__*/_react.default.createElement("input", {
-    type: "text",
-    placeholder: "Search restaurants",
-    value: searchText,
-    className: "search-input",
-    onChange: handleSearch
-  }), /*#__PURE__*/_react.default.createElement("button", {
-    onClick: function onClick() {
-      location.reload();
-    }
-  }, "reset")), /*#__PURE__*/_react.default.createElement("div", {
-    className: "filtercontainer"
-  }, /*#__PURE__*/_react.default.createElement("button", {
-    className: "filter-btn",
-    onClick: handleFilter
-  }, "Top Rated Restaurant")), /*#__PURE__*/_react.default.createElement("div", {
-    className: "restaurant-list"
-  }, FilteredList.length > 0 ? FilteredList.map(function (restaurant, index) {
-    return /*#__PURE__*/_react.default.createElement(_RestaurantCard.default, {
-      data: restaurant,
-      key: index
-    });
-  }) : /*#__PURE__*/_react.default.createElement("p", null, "No restaurants available")));
-};
-var _default = exports.default = Body;
-},{"react":"node_modules/react/index.js","../components/config":"src/components/config.jsx","../components/RestaurantCard":"src/components/RestaurantCard.jsx","../components/Shimmer":"src/components/Shimmer.js"}],"src/components/Footer.jsx":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _react = _interopRequireDefault(require("react"));
-function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
-var Footer = function Footer() {
-  return /*#__PURE__*/_react.default.createElement("div", {
-    className: "footer"
-  }, /*#__PURE__*/_react.default.createElement("p", null, " Made with \u2764\uFE0F by Sagar Panwar "));
-};
-var _default = exports.default = Footer;
-},{"react":"node_modules/react/index.js"}],"src/components/About.jsx":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _react = _interopRequireDefault(require("react"));
-function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
-var About = function About() {
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h1", null, " about us page "));
-};
-var _default = exports.default = About;
-},{"react":"node_modules/react/index.js"}],"src/components/Contact.jsx":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _react = _interopRequireDefault(require("react"));
-function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
-var Contact = function Contact() {
-  return /*#__PURE__*/_react.default.createElement("div", null, "this is contact page");
-};
-var _default = exports.default = Contact;
-},{"react":"node_modules/react/index.js"}],"node_modules/@remix-run/router/dist/router.js":[function(require,module,exports) {
+},{}],"node_modules/@remix-run/router/dist/router.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -39529,7 +38363,1147 @@ function useViewTransitionState(to, opts) {
   return (0, _router.matchPath)(path.pathname, nextPath) != null || (0, _router.matchPath)(path.pathname, currentPath) != null;
 }
 //#endregion
-},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","react-router":"node_modules/react-router/dist/index.js","@remix-run/router":"node_modules/@remix-run/router/dist/router.js"}],"app.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","react-router":"node_modules/react-router/dist/index.js","@remix-run/router":"node_modules/@remix-run/router/dist/router.js"}],"src/components/Header.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _react = _interopRequireWildcard(require("react"));
+var _logofoodsite = _interopRequireDefault(require("../../assests/images/logofoodsite.png"));
+var _reactRouterDom = require("react-router-dom");
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
+function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function (e) { return e ? t : r; })(e); }
+function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; if (null === e || "object" != typeof e && "function" != typeof e) return { default: e }; var t = _getRequireWildcardCache(r); if (t && t.has(e)) return t.get(e); var n = { __proto__: null }, a = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var u in e) if ("default" !== u && {}.hasOwnProperty.call(e, u)) { var i = a ? Object.getOwnPropertyDescriptor(e, u) : null; i && (i.get || i.set) ? Object.defineProperty(n, u, i) : n[u] = e[u]; } return n.default = e, t && t.set(e, n), n; }
+function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
+var Title = function Title() {
+  return /*#__PURE__*/_react.default.createElement("img", {
+    className: "logo",
+    alt: "logo",
+    src: _logofoodsite.default
+  });
+};
+var NavComponent = function NavComponent() {
+  var _useState = (0, _react.useState)("Login"),
+    _useState2 = _slicedToArray(_useState, 2),
+    btnNameReact = _useState2[0],
+    setbtnNameReact = _useState2[1];
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: "nav-items"
+  }, /*#__PURE__*/_react.default.createElement("ul", null, /*#__PURE__*/_react.default.createElement("li", null, " ", /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: "/"
+  }, " Home ")), /*#__PURE__*/_react.default.createElement("li", null, " ", /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: "/about"
+  }, "About  "), " "), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: "/contact"
+  }, " Contact  "), " "), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: "/"
+  }, " Cart "), " "), /*#__PURE__*/_react.default.createElement("button", {
+    className: "loginBtn",
+    onClick: function onClick() {
+      btnNameReact === "Login" ? setbtnNameReact("Logout") : setbtnNameReact("Login");
+    }
+  }, " ", btnNameReact)));
+};
+var Header = function Header() {
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: "header"
+  }, /*#__PURE__*/_react.default.createElement(Title, null), /*#__PURE__*/_react.default.createElement(NavComponent, null));
+};
+var _default = exports.default = Header;
+},{"react":"node_modules/react/index.js","../../assests/images/logofoodsite.png":"assests/images/logofoodsite.png","react-router-dom":"node_modules/react-router-dom/dist/index.js"}],"src/components/config.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.restaurantList = exports.IMG_CDN = exports.GET_RES_API_URL = exports.GET_MENU_API_URL = void 0;
+//Config Driven UI - Mock Data from API
+
+var IMG_CDN = exports.IMG_CDN = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/";
+var GET_RES_API_URL = exports.GET_RES_API_URL = "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING";
+var GET_MENU_API_URL = exports.GET_MENU_API_URL = "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.65420&lng=77.23730&restaurantId=425&submitAction=Enter";
+
+// https://www.swiggy.com/dapi/menu?page-type=REGULAR_MENU&complete-menu=true&lat=21.1702401&lng=72.83106070000001&&submitAction=ENTER&restaurantId=
+
+var restaurantList = exports.restaurantList = [{
+  type: "restaurant",
+  data: {
+    type: "F",
+    id: "73011",
+    name: "KFC",
+    uuid: "27ff4155-fe46-418e-9862-ab98953bf953",
+    city: "22",
+    area: "Anand Vihar Colony",
+    totalRatingsString: "5000+ ratings",
+    cloudinaryImageId: "bdcd233971b7c81bf77e1fa4471280eb",
+    cuisines: ["American", "Snacks", "Biryani"],
+    tags: [],
+    costForTwo: 30000,
+    costForTwoString: "₹300 FOR TWO",
+    deliveryTime: 31,
+    minDeliveryTime: 31,
+    maxDeliveryTime: 31,
+    slaString: "31 MINS",
+    lastMileTravel: 6.199999809265137,
+    slugs: {
+      restaurant: "kfc-chukkuwala-chukkuwala",
+      city: "dehradun"
+    },
+    cityState: "22",
+    address: "KFC Restaurant, Khasra No 1281/1291, Opp Dr Manish Jain hospital, Chakrata road, Dehradun-248001",
+    locality: "Clock Tower",
+    parentId: 547,
+    unserviceable: false,
+    veg: false,
+    select: false,
+    favorite: false,
+    tradeCampaignHeaders: [],
+    aggregatedDiscountInfo: {
+      header: "50% off",
+      shortDescriptionList: [{
+        meta: "50% off | Use WELCOME50",
+        discountType: "Percentage",
+        operationType: "RESTAURANT"
+      }],
+      descriptionList: [{
+        meta: "50% off up to ₹100 | Use code WELCOME50",
+        discountType: "Percentage",
+        operationType: "RESTAURANT"
+      }],
+      subHeader: "",
+      headerType: 0,
+      superFreedel: ""
+    },
+    aggregatedDiscountInfoV2: {
+      header: "50% OFF",
+      shortDescriptionList: [{
+        meta: "Use WELCOME50",
+        discountType: "Percentage",
+        operationType: "RESTAURANT"
+      }],
+      descriptionList: [{
+        meta: "50% off up to ₹100 | Use code WELCOME50",
+        discountType: "Percentage",
+        operationType: "RESTAURANT"
+      }],
+      subHeader: "",
+      headerType: 0,
+      superFreedel: ""
+    },
+    ribbon: [{
+      type: "PROMOTED"
+    }],
+    chain: [],
+    feeDetails: {
+      fees: [],
+      totalFees: 0,
+      message: "",
+      title: "",
+      amount: "",
+      icon: ""
+    },
+    availability: {
+      opened: true,
+      nextOpenMessage: "",
+      nextCloseMessage: ""
+    },
+    longDistanceEnabled: 0,
+    rainMode: "NONE",
+    thirdPartyAddress: false,
+    thirdPartyVendor: "",
+    adTrackingID: "cid=5698075~p=1~eid=00000185-8b09-7c92-0e51-a04b00dc0124",
+    badges: {
+      imageBased: [],
+      textBased: [],
+      textExtendedBadges: []
+    },
+    lastMileTravelString: "6.1 kms",
+    hasSurge: false,
+    sla: {
+      restaurantId: "73011",
+      deliveryTime: 31,
+      minDeliveryTime: 31,
+      maxDeliveryTime: 31,
+      lastMileTravel: 6.199999809265137,
+      lastMileDistance: 0,
+      serviceability: "SERVICEABLE",
+      rainMode: "NONE",
+      longDistance: "NOT_LONG_DISTANCE",
+      preferentialService: false,
+      iconType: "EMPTY"
+    },
+    promoted: true,
+    avgRating: "4.2",
+    totalRatings: 5000,
+    new: false
+  },
+  subtype: "basic"
+}, {
+  type: "restaurant",
+  data: {
+    type: "F",
+    id: "542132",
+    name: "Domnik Pizza",
+    uuid: "f2ee37f5-9ab0-4903-9420-6cae020b0a38",
+    city: "22",
+    area: "Majra    Bansal Home",
+    totalRatingsString: "50+ ratings",
+    cloudinaryImageId: "sboh9oor0cvp6ztsyhvj",
+    cuisines: ["Pizzas", "Italian", "Fast Food", "Snacks", "Beverages"],
+    tags: [],
+    costForTwo: 30000,
+    costForTwoString: "₹300 FOR TWO",
+    deliveryTime: 33,
+    minDeliveryTime: 33,
+    maxDeliveryTime: 33,
+    slaString: "33 MINS",
+    lastMileTravel: 0.6000000238418579,
+    slugs: {
+      restaurant: "domnik-pizza-patel-nagar-patel-nagar-2",
+      city: "dehradun"
+    },
+    cityState: "22",
+    address: "28/3 Sewala Chandravani Road, Arcedia Grant, Dehradun Rural, Dehradun, Uttarakhand",
+    locality: "Patel Nagar",
+    parentId: 22321,
+    unserviceable: false,
+    veg: false,
+    select: false,
+    favorite: false,
+    tradeCampaignHeaders: [],
+    aggregatedDiscountInfo: {
+      header: "50% off",
+      shortDescriptionList: [{
+        meta: "50% off | Use WELCOME50",
+        discountType: "Percentage",
+        operationType: "RESTAURANT"
+      }],
+      descriptionList: [{
+        meta: "50% off up to ₹100 | Use code WELCOME50",
+        discountType: "Percentage",
+        operationType: "RESTAURANT"
+      }],
+      subHeader: "",
+      headerType: 0,
+      superFreedel: ""
+    },
+    aggregatedDiscountInfoV2: {
+      header: "50% OFF",
+      shortDescriptionList: [{
+        meta: "Use WELCOME50",
+        discountType: "Percentage",
+        operationType: "RESTAURANT"
+      }],
+      descriptionList: [{
+        meta: "50% off up to ₹100 | Use code WELCOME50",
+        discountType: "Percentage",
+        operationType: "RESTAURANT"
+      }],
+      subHeader: "",
+      headerType: 0,
+      superFreedel: ""
+    },
+    chain: [],
+    feeDetails: {
+      fees: [],
+      totalFees: 0,
+      message: "",
+      title: "",
+      amount: "",
+      icon: ""
+    },
+    availability: {
+      opened: true,
+      nextOpenMessage: "",
+      nextCloseMessage: ""
+    },
+    longDistanceEnabled: 0,
+    rainMode: "NONE",
+    thirdPartyAddress: false,
+    thirdPartyVendor: "",
+    adTrackingID: "",
+    badges: {
+      imageBased: [],
+      textBased: [],
+      textExtendedBadges: []
+    },
+    lastMileTravelString: "0.6 kms",
+    hasSurge: false,
+    sla: {
+      restaurantId: "542132",
+      deliveryTime: 33,
+      minDeliveryTime: 33,
+      maxDeliveryTime: 33,
+      lastMileTravel: 0.6000000238418579,
+      lastMileDistance: 0,
+      serviceability: "SERVICEABLE",
+      rainMode: "NONE",
+      longDistance: "NOT_LONG_DISTANCE",
+      preferentialService: false,
+      iconType: "EMPTY"
+    },
+    promoted: false,
+    avgRating: "3.9",
+    totalRatings: 50,
+    new: false
+  },
+  subtype: "basic"
+}, {
+  type: "restaurant",
+  data: {
+    type: "F",
+    id: "321517",
+    name: "FOOD PLANET RESTAURANT",
+    uuid: "899d5dd4-200a-48b2-a321-391bb9486ec2",
+    city: "22",
+    area: "Majra",
+    totalRatingsString: "50+ ratings",
+    cloudinaryImageId: "ykboewqeoxnne8fgrnui",
+    cuisines: ["Indian", "Chinese", "Tandoor", "Thalis", "Fast Food"],
+    tags: [],
+    costForTwo: 20000,
+    costForTwoString: "₹200 FOR TWO",
+    deliveryTime: 25,
+    minDeliveryTime: 25,
+    maxDeliveryTime: 25,
+    slaString: "25 MINS",
+    lastMileTravel: 0.699999988079071,
+    slugs: {
+      restaurant: "food-planet-restaurant-patel-nagar-patel-nagar",
+      city: "dehradun"
+    },
+    cityState: "22",
+    address: "157/11, Chandra Parisar Chandra Bani Rd, Ekta Enclave, Doon Enclave, Majra, Dehradun, Uttarakhand 248171",
+    locality: "Patel Nagar",
+    parentId: 81850,
+    unserviceable: false,
+    veg: false,
+    select: false,
+    favorite: false,
+    tradeCampaignHeaders: [],
+    aggregatedDiscountInfo: {
+      header: "50% off",
+      shortDescriptionList: [{
+        meta: "50% off | Use WELCOME50",
+        discountType: "Percentage",
+        operationType: "RESTAURANT"
+      }],
+      descriptionList: [{
+        meta: "50% off up to ₹100 | Use code WELCOME50",
+        discountType: "Percentage",
+        operationType: "RESTAURANT"
+      }],
+      subHeader: "",
+      headerType: 0,
+      superFreedel: ""
+    },
+    aggregatedDiscountInfoV2: {
+      header: "50% OFF",
+      shortDescriptionList: [{
+        meta: "Use WELCOME50",
+        discountType: "Percentage",
+        operationType: "RESTAURANT"
+      }],
+      descriptionList: [{
+        meta: "50% off up to ₹100 | Use code WELCOME50",
+        discountType: "Percentage",
+        operationType: "RESTAURANT"
+      }],
+      subHeader: "",
+      headerType: 0,
+      superFreedel: ""
+    },
+    chain: [],
+    feeDetails: {
+      fees: [],
+      totalFees: 0,
+      message: "",
+      title: "",
+      amount: "",
+      icon: ""
+    },
+    availability: {
+      opened: true,
+      nextOpenMessage: "",
+      nextCloseMessage: ""
+    },
+    longDistanceEnabled: 0,
+    rainMode: "NONE",
+    thirdPartyAddress: false,
+    thirdPartyVendor: "",
+    adTrackingID: "",
+    badges: {
+      imageBased: [],
+      textBased: [],
+      textExtendedBadges: []
+    },
+    lastMileTravelString: "0.6 kms",
+    hasSurge: false,
+    sla: {
+      restaurantId: "321517",
+      deliveryTime: 25,
+      minDeliveryTime: 25,
+      maxDeliveryTime: 25,
+      lastMileTravel: 0.699999988079071,
+      lastMileDistance: 0,
+      serviceability: "SERVICEABLE",
+      rainMode: "NONE",
+      longDistance: "NOT_LONG_DISTANCE",
+      preferentialService: false,
+      iconType: "EMPTY"
+    },
+    promoted: false,
+    avgRating: "2.8",
+    totalRatings: 50,
+    new: false
+  },
+  subtype: "basic"
+}, {
+  type: "restaurant",
+  data: {
+    type: "F",
+    id: "311806",
+    name: "Burger King",
+    uuid: "162a4dc4-50de-452a-82cf-751e18ac9952",
+    city: "22",
+    area: "Anand Vihar Colony",
+    totalRatingsString: "5000+ ratings",
+    cloudinaryImageId: "iqh7ew5ldfgvpd5dpz60",
+    cuisines: ["Burgers", "American"],
+    tags: [],
+    costForTwo: 35000,
+    costForTwoString: "₹350 FOR TWO",
+    deliveryTime: 39,
+    minDeliveryTime: 39,
+    maxDeliveryTime: 39,
+    slaString: "39 MINS",
+    lastMileTravel: 6.300000190734863,
+    slugs: {
+      restaurant: "burger-king-chakrata-road-ballupur",
+      city: "dehradun"
+    },
+    cityState: "22",
+    address: "5/5,4/4 & 3/3, GROUND FLOOR, CHAKRATA ROAD, DEHRADUN, UTTRAKHAND",
+    locality: "CHAKRATA ROAD",
+    parentId: 166,
+    unserviceable: false,
+    veg: false,
+    select: false,
+    favorite: false,
+    tradeCampaignHeaders: [],
+    aggregatedDiscountInfo: {
+      header: "60% off",
+      shortDescriptionList: [{
+        meta: "60% off | Use STEALDEAL",
+        discountType: "Percentage",
+        operationType: "RESTAURANT"
+      }],
+      descriptionList: [{
+        meta: "60% off up to ₹120 | Use code STEALDEAL",
+        discountType: "Percentage",
+        operationType: "RESTAURANT"
+      }],
+      subHeader: "",
+      headerType: 0,
+      superFreedel: ""
+    },
+    aggregatedDiscountInfoV2: {
+      header: "60% OFF",
+      shortDescriptionList: [{
+        meta: "Use STEALDEAL",
+        discountType: "Percentage",
+        operationType: "RESTAURANT"
+      }],
+      descriptionList: [{
+        meta: "60% off up to ₹120 | Use code STEALDEAL",
+        discountType: "Percentage",
+        operationType: "RESTAURANT"
+      }],
+      subHeader: "",
+      headerType: 0,
+      superFreedel: ""
+    },
+    ribbon: [{
+      type: "PROMOTED"
+    }],
+    chain: [],
+    feeDetails: {
+      fees: [],
+      totalFees: 0,
+      message: "",
+      title: "",
+      amount: "",
+      icon: ""
+    },
+    availability: {
+      opened: true,
+      nextOpenMessage: "",
+      nextCloseMessage: ""
+    },
+    longDistanceEnabled: 0,
+    rainMode: "NONE",
+    thirdPartyAddress: false,
+    thirdPartyVendor: "",
+    adTrackingID: "cid=5700193~p=4~eid=00000185-8b09-7c92-0e51-a04c00dc0405",
+    badges: {
+      imageBased: [],
+      textBased: [],
+      textExtendedBadges: []
+    },
+    lastMileTravelString: "6.3 kms",
+    hasSurge: false,
+    sla: {
+      restaurantId: "311806",
+      deliveryTime: 39,
+      minDeliveryTime: 39,
+      maxDeliveryTime: 39,
+      lastMileTravel: 6.300000190734863,
+      lastMileDistance: 0,
+      serviceability: "SERVICEABLE",
+      rainMode: "NONE",
+      longDistance: "NOT_LONG_DISTANCE",
+      preferentialService: false,
+      iconType: "EMPTY"
+    },
+    promoted: true,
+    avgRating: "3.2",
+    totalRatings: 5000,
+    new: false
+  },
+  subtype: "basic"
+}, {
+  type: "restaurant",
+  data: {
+    type: "F",
+    id: "132460",
+    name: "Annapurna Andhra Mess",
+    uuid: "c6460418-904b-4371-9e04-0ce8b1b46cae",
+    city: "22",
+    area: "Dehradun",
+    totalRatingsString: "1000+ ratings",
+    cloudinaryImageId: "zw4qx2szsy9kbszk9n3d",
+    cuisines: ["South Indian", "Biryani", "North Indian"],
+    tags: [],
+    costForTwo: 20000,
+    costForTwoString: "₹200 FOR TWO",
+    deliveryTime: 25,
+    minDeliveryTime: 25,
+    maxDeliveryTime: 25,
+    slaString: "25 MINS",
+    lastMileTravel: 1.399999976158142,
+    slugs: {
+      restaurant: "annapurna-andhra-mess-subhash-nagar-subhash-nagar",
+      city: "dehradun"
+    },
+    cityState: "22",
+    address: "keshav enclave sewla khurd chandrabani road behind uttranchal PG college",
+    locality: "Patel Nagar",
+    parentId: 33997,
+    unserviceable: false,
+    veg: false,
+    select: false,
+    favorite: false,
+    tradeCampaignHeaders: [],
+    aggregatedDiscountInfo: {
+      header: "50% off",
+      shortDescriptionList: [{
+        meta: "50% off | Use WELCOME50",
+        discountType: "Percentage",
+        operationType: "RESTAURANT"
+      }],
+      descriptionList: [{
+        meta: "50% off up to ₹100 | Use code WELCOME50",
+        discountType: "Percentage",
+        operationType: "RESTAURANT"
+      }],
+      subHeader: "",
+      headerType: 0,
+      superFreedel: ""
+    },
+    aggregatedDiscountInfoV2: {
+      header: "50% OFF",
+      shortDescriptionList: [{
+        meta: "Use WELCOME50",
+        discountType: "Percentage",
+        operationType: "RESTAURANT"
+      }],
+      descriptionList: [{
+        meta: "50% off up to ₹100 | Use code WELCOME50",
+        discountType: "Percentage",
+        operationType: "RESTAURANT"
+      }],
+      subHeader: "",
+      headerType: 0,
+      superFreedel: ""
+    },
+    chain: [],
+    feeDetails: {
+      fees: [],
+      totalFees: 0,
+      message: "",
+      title: "",
+      amount: "",
+      icon: ""
+    },
+    availability: {
+      opened: true,
+      nextOpenMessage: "",
+      nextCloseMessage: ""
+    },
+    longDistanceEnabled: 0,
+    rainMode: "NONE",
+    thirdPartyAddress: false,
+    thirdPartyVendor: "",
+    adTrackingID: "",
+    badges: {
+      imageBased: [],
+      textBased: [],
+      textExtendedBadges: []
+    },
+    lastMileTravelString: "1.3 kms",
+    hasSurge: false,
+    sla: {
+      restaurantId: "132460",
+      deliveryTime: 25,
+      minDeliveryTime: 25,
+      maxDeliveryTime: 25,
+      lastMileTravel: 1.399999976158142,
+      lastMileDistance: 0,
+      serviceability: "SERVICEABLE",
+      rainMode: "NONE",
+      longDistance: "NOT_LONG_DISTANCE",
+      preferentialService: false,
+      iconType: "EMPTY"
+    },
+    promoted: false,
+    avgRating: "4.0",
+    totalRatings: 1000,
+    new: false
+  },
+  subtype: "basic"
+}, {
+  type: "restaurant",
+  data: {
+    type: "F",
+    id: "496677",
+    name: "Uncle Ji Restaurant",
+    uuid: "e652ab57-22c2-4226-b5ea-a5caa26ee0f8",
+    city: "22",
+    area: "Patel Nagar",
+    totalRatingsString: "Too Few Ratings",
+    cloudinaryImageId: "kx2ghnwagcnqjtmd5jbc",
+    cuisines: ["North Indian", "Snacks", "Beverages"],
+    tags: [],
+    costForTwo: 30000,
+    costForTwoString: "₹300 FOR TWO",
+    deliveryTime: 31,
+    minDeliveryTime: 31,
+    maxDeliveryTime: 31,
+    slaString: "31 MINS",
+    lastMileTravel: 0.800000011920929,
+    slugs: {
+      restaurant: "uncle-ji-restaurant-patel-nagar-patel-nagar",
+      city: "dehradun"
+    },
+    cityState: "22",
+    address: "348 santosh tower, majra road gram majra dehradun 248001",
+    locality: "Patel Nagar",
+    parentId: 298209,
+    unserviceable: false,
+    veg: false,
+    select: false,
+    favorite: false,
+    tradeCampaignHeaders: [],
+    aggregatedDiscountInfo: {
+      header: "50% off",
+      shortDescriptionList: [{
+        meta: "50% off | Use WELCOME50",
+        discountType: "Percentage",
+        operationType: "RESTAURANT"
+      }],
+      descriptionList: [{
+        meta: "50% off up to ₹100 | Use code WELCOME50",
+        discountType: "Percentage",
+        operationType: "RESTAURANT"
+      }],
+      subHeader: "",
+      headerType: 0,
+      superFreedel: ""
+    },
+    aggregatedDiscountInfoV2: {
+      header: "50% OFF",
+      shortDescriptionList: [{
+        meta: "Use WELCOME50",
+        discountType: "Percentage",
+        operationType: "RESTAURANT"
+      }],
+      descriptionList: [{
+        meta: "50% off up to ₹100 | Use code WELCOME50",
+        discountType: "Percentage",
+        operationType: "RESTAURANT"
+      }],
+      subHeader: "",
+      headerType: 0,
+      superFreedel: ""
+    },
+    chain: [],
+    feeDetails: {
+      fees: [],
+      totalFees: 0,
+      message: "",
+      title: "",
+      amount: "",
+      icon: ""
+    },
+    availability: {
+      opened: true,
+      nextOpenMessage: "",
+      nextCloseMessage: ""
+    },
+    longDistanceEnabled: 0,
+    rainMode: "NONE",
+    thirdPartyAddress: false,
+    thirdPartyVendor: "",
+    adTrackingID: "",
+    badges: {
+      imageBased: [],
+      textBased: [],
+      textExtendedBadges: []
+    },
+    lastMileTravelString: "0.8 kms",
+    hasSurge: false,
+    sla: {
+      restaurantId: "496677",
+      deliveryTime: 31,
+      minDeliveryTime: 31,
+      maxDeliveryTime: 31,
+      lastMileTravel: 0.800000011920929,
+      lastMileDistance: 0,
+      serviceability: "SERVICEABLE",
+      rainMode: "NONE",
+      longDistance: "NOT_LONG_DISTANCE",
+      preferentialService: false,
+      iconType: "EMPTY"
+    },
+    promoted: false,
+    avgRating: "4.9",
+    totalRatings: 0,
+    new: false
+  },
+  subtype: "basic"
+}];
+},{}],"src/components/RestaurantCard.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _react = _interopRequireDefault(require("react"));
+var _reactRouterDom = require("react-router-dom");
+var _config = require("../components/config");
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
+// import imgCdn 
+
+var RestaurantCard = function RestaurantCard(_ref) {
+  var _data$info, _data$info2, _data$info3, _data$info4;
+  var data = _ref.data;
+  var restID = data === null || data === void 0 || (_data$info = data.info) === null || _data$info === void 0 ? void 0 : _data$info.id;
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: "card"
+  }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: "restaurantmenu/".concat(restID)
+  }, /*#__PURE__*/_react.default.createElement("img", {
+    src: _config.IMG_CDN + (data === null || data === void 0 || (_data$info2 = data.info) === null || _data$info2 === void 0 ? void 0 : _data$info2.cloudinaryImageId),
+    alt: data === null || data === void 0 ? void 0 : data.info
+  }), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement("span", {
+    className: "card-title"
+  }, data === null || data === void 0 || (_data$info3 = data.info) === null || _data$info3 === void 0 ? void 0 : _data$info3.name), /*#__PURE__*/_react.default.createElement("span", {
+    className: "card-tags"
+  }, data === null || data === void 0 ? void 0 : data.info.cuisines.join(", ")), /*#__PURE__*/_react.default.createElement("span", {
+    className: "card-rating"
+  }, data === null || data === void 0 || (_data$info4 = data.info) === null || _data$info4 === void 0 ? void 0 : _data$info4.avgRating))));
+};
+var _default = exports.default = RestaurantCard;
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/dist/index.js","../components/config":"src/components/config.jsx"}],"src/components/Shimmer.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _react = _interopRequireDefault(require("react"));
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
+var Shimmer = function Shimmer() {
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: "shimmer-container"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "shimmercard"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "shimmer-img"
+  }), /*#__PURE__*/_react.default.createElement("div", {
+    className: "shimmer-title"
+  }), /*#__PURE__*/_react.default.createElement("div", {
+    className: "shimmer-tags"
+  }, " "), /*#__PURE__*/_react.default.createElement("div", {
+    className: "shimmer-details"
+  })), /*#__PURE__*/_react.default.createElement("div", {
+    className: "shimmercard"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "shimmer-img"
+  }), /*#__PURE__*/_react.default.createElement("div", {
+    className: "shimmer-title"
+  }), /*#__PURE__*/_react.default.createElement("div", {
+    className: "shimmer-tags"
+  }, " "), /*#__PURE__*/_react.default.createElement("div", {
+    className: "shimmer-details"
+  })), /*#__PURE__*/_react.default.createElement("div", {
+    className: "shimmercard"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "shimmer-img"
+  }), /*#__PURE__*/_react.default.createElement("div", {
+    className: "shimmer-title"
+  }), /*#__PURE__*/_react.default.createElement("div", {
+    className: "shimmer-tags"
+  }, " "), /*#__PURE__*/_react.default.createElement("div", {
+    className: "shimmer-details"
+  })), /*#__PURE__*/_react.default.createElement("div", {
+    className: "shimmercard"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "shimmer-img"
+  }), /*#__PURE__*/_react.default.createElement("div", {
+    className: "shimmer-title"
+  }), /*#__PURE__*/_react.default.createElement("div", {
+    className: "shimmer-tags"
+  }, " "), /*#__PURE__*/_react.default.createElement("div", {
+    className: "shimmer-details"
+  })), /*#__PURE__*/_react.default.createElement("div", {
+    className: "shimmercard"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "shimmer-img"
+  }), /*#__PURE__*/_react.default.createElement("div", {
+    className: "shimmer-title"
+  }), /*#__PURE__*/_react.default.createElement("div", {
+    className: "shimmer-tags"
+  }, " "), /*#__PURE__*/_react.default.createElement("div", {
+    className: "shimmer-details"
+  })));
+};
+var _default = exports.default = Shimmer;
+},{"react":"node_modules/react/index.js"}],"src/components/Body.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _react = _interopRequireWildcard(require("react"));
+var _config = require("../components/config");
+var _RestaurantCard = _interopRequireDefault(require("../components/RestaurantCard"));
+var _Shimmer = _interopRequireDefault(require("../components/Shimmer"));
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
+function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function (e) { return e ? t : r; })(e); }
+function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; if (null === e || "object" != typeof e && "function" != typeof e) return { default: e }; var t = _getRequireWildcardCache(r); if (t && t.has(e)) return t.get(e); var n = { __proto__: null }, a = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var u in e) if ("default" !== u && {}.hasOwnProperty.call(e, u)) { var i = a ? Object.getOwnPropertyDescriptor(e, u) : null; i && (i.get || i.set) ? Object.defineProperty(n, u, i) : n[u] = e[u]; } return n.default = e, t && t.set(e, n), n; }
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ _regeneratorRuntime = function _regeneratorRuntime() { return e; }; var t, e = {}, r = Object.prototype, n = r.hasOwnProperty, o = Object.defineProperty || function (t, e, r) { t[e] = r.value; }, i = "function" == typeof Symbol ? Symbol : {}, a = i.iterator || "@@iterator", c = i.asyncIterator || "@@asyncIterator", u = i.toStringTag || "@@toStringTag"; function define(t, e, r) { return Object.defineProperty(t, e, { value: r, enumerable: !0, configurable: !0, writable: !0 }), t[e]; } try { define({}, ""); } catch (t) { define = function define(t, e, r) { return t[e] = r; }; } function wrap(t, e, r, n) { var i = e && e.prototype instanceof Generator ? e : Generator, a = Object.create(i.prototype), c = new Context(n || []); return o(a, "_invoke", { value: makeInvokeMethod(t, r, c) }), a; } function tryCatch(t, e, r) { try { return { type: "normal", arg: t.call(e, r) }; } catch (t) { return { type: "throw", arg: t }; } } e.wrap = wrap; var h = "suspendedStart", l = "suspendedYield", f = "executing", s = "completed", y = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var p = {}; define(p, a, function () { return this; }); var d = Object.getPrototypeOf, v = d && d(d(values([]))); v && v !== r && n.call(v, a) && (p = v); var g = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(p); function defineIteratorMethods(t) { ["next", "throw", "return"].forEach(function (e) { define(t, e, function (t) { return this._invoke(e, t); }); }); } function AsyncIterator(t, e) { function invoke(r, o, i, a) { var c = tryCatch(t[r], t, o); if ("throw" !== c.type) { var u = c.arg, h = u.value; return h && "object" == _typeof(h) && n.call(h, "__await") ? e.resolve(h.__await).then(function (t) { invoke("next", t, i, a); }, function (t) { invoke("throw", t, i, a); }) : e.resolve(h).then(function (t) { u.value = t, i(u); }, function (t) { return invoke("throw", t, i, a); }); } a(c.arg); } var r; o(this, "_invoke", { value: function value(t, n) { function callInvokeWithMethodAndArg() { return new e(function (e, r) { invoke(t, n, e, r); }); } return r = r ? r.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); } }); } function makeInvokeMethod(e, r, n) { var o = h; return function (i, a) { if (o === f) throw Error("Generator is already running"); if (o === s) { if ("throw" === i) throw a; return { value: t, done: !0 }; } for (n.method = i, n.arg = a;;) { var c = n.delegate; if (c) { var u = maybeInvokeDelegate(c, n); if (u) { if (u === y) continue; return u; } } if ("next" === n.method) n.sent = n._sent = n.arg;else if ("throw" === n.method) { if (o === h) throw o = s, n.arg; n.dispatchException(n.arg); } else "return" === n.method && n.abrupt("return", n.arg); o = f; var p = tryCatch(e, r, n); if ("normal" === p.type) { if (o = n.done ? s : l, p.arg === y) continue; return { value: p.arg, done: n.done }; } "throw" === p.type && (o = s, n.method = "throw", n.arg = p.arg); } }; } function maybeInvokeDelegate(e, r) { var n = r.method, o = e.iterator[n]; if (o === t) return r.delegate = null, "throw" === n && e.iterator.return && (r.method = "return", r.arg = t, maybeInvokeDelegate(e, r), "throw" === r.method) || "return" !== n && (r.method = "throw", r.arg = new TypeError("The iterator does not provide a '" + n + "' method")), y; var i = tryCatch(o, e.iterator, r.arg); if ("throw" === i.type) return r.method = "throw", r.arg = i.arg, r.delegate = null, y; var a = i.arg; return a ? a.done ? (r[e.resultName] = a.value, r.next = e.nextLoc, "return" !== r.method && (r.method = "next", r.arg = t), r.delegate = null, y) : a : (r.method = "throw", r.arg = new TypeError("iterator result is not an object"), r.delegate = null, y); } function pushTryEntry(t) { var e = { tryLoc: t[0] }; 1 in t && (e.catchLoc = t[1]), 2 in t && (e.finallyLoc = t[2], e.afterLoc = t[3]), this.tryEntries.push(e); } function resetTryEntry(t) { var e = t.completion || {}; e.type = "normal", delete e.arg, t.completion = e; } function Context(t) { this.tryEntries = [{ tryLoc: "root" }], t.forEach(pushTryEntry, this), this.reset(!0); } function values(e) { if (e || "" === e) { var r = e[a]; if (r) return r.call(e); if ("function" == typeof e.next) return e; if (!isNaN(e.length)) { var o = -1, i = function next() { for (; ++o < e.length;) if (n.call(e, o)) return next.value = e[o], next.done = !1, next; return next.value = t, next.done = !0, next; }; return i.next = i; } } throw new TypeError(_typeof(e) + " is not iterable"); } return GeneratorFunction.prototype = GeneratorFunctionPrototype, o(g, "constructor", { value: GeneratorFunctionPrototype, configurable: !0 }), o(GeneratorFunctionPrototype, "constructor", { value: GeneratorFunction, configurable: !0 }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, u, "GeneratorFunction"), e.isGeneratorFunction = function (t) { var e = "function" == typeof t && t.constructor; return !!e && (e === GeneratorFunction || "GeneratorFunction" === (e.displayName || e.name)); }, e.mark = function (t) { return Object.setPrototypeOf ? Object.setPrototypeOf(t, GeneratorFunctionPrototype) : (t.__proto__ = GeneratorFunctionPrototype, define(t, u, "GeneratorFunction")), t.prototype = Object.create(g), t; }, e.awrap = function (t) { return { __await: t }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, c, function () { return this; }), e.AsyncIterator = AsyncIterator, e.async = function (t, r, n, o, i) { void 0 === i && (i = Promise); var a = new AsyncIterator(wrap(t, r, n, o), i); return e.isGeneratorFunction(r) ? a : a.next().then(function (t) { return t.done ? t.value : a.next(); }); }, defineIteratorMethods(g), define(g, u, "Generator"), define(g, a, function () { return this; }), define(g, "toString", function () { return "[object Generator]"; }), e.keys = function (t) { var e = Object(t), r = []; for (var n in e) r.push(n); return r.reverse(), function next() { for (; r.length;) { var t = r.pop(); if (t in e) return next.value = t, next.done = !1, next; } return next.done = !0, next; }; }, e.values = values, Context.prototype = { constructor: Context, reset: function reset(e) { if (this.prev = 0, this.next = 0, this.sent = this._sent = t, this.done = !1, this.delegate = null, this.method = "next", this.arg = t, this.tryEntries.forEach(resetTryEntry), !e) for (var r in this) "t" === r.charAt(0) && n.call(this, r) && !isNaN(+r.slice(1)) && (this[r] = t); }, stop: function stop() { this.done = !0; var t = this.tryEntries[0].completion; if ("throw" === t.type) throw t.arg; return this.rval; }, dispatchException: function dispatchException(e) { if (this.done) throw e; var r = this; function handle(n, o) { return a.type = "throw", a.arg = e, r.next = n, o && (r.method = "next", r.arg = t), !!o; } for (var o = this.tryEntries.length - 1; o >= 0; --o) { var i = this.tryEntries[o], a = i.completion; if ("root" === i.tryLoc) return handle("end"); if (i.tryLoc <= this.prev) { var c = n.call(i, "catchLoc"), u = n.call(i, "finallyLoc"); if (c && u) { if (this.prev < i.catchLoc) return handle(i.catchLoc, !0); if (this.prev < i.finallyLoc) return handle(i.finallyLoc); } else if (c) { if (this.prev < i.catchLoc) return handle(i.catchLoc, !0); } else { if (!u) throw Error("try statement without catch or finally"); if (this.prev < i.finallyLoc) return handle(i.finallyLoc); } } } }, abrupt: function abrupt(t, e) { for (var r = this.tryEntries.length - 1; r >= 0; --r) { var o = this.tryEntries[r]; if (o.tryLoc <= this.prev && n.call(o, "finallyLoc") && this.prev < o.finallyLoc) { var i = o; break; } } i && ("break" === t || "continue" === t) && i.tryLoc <= e && e <= i.finallyLoc && (i = null); var a = i ? i.completion : {}; return a.type = t, a.arg = e, i ? (this.method = "next", this.next = i.finallyLoc, y) : this.complete(a); }, complete: function complete(t, e) { if ("throw" === t.type) throw t.arg; return "break" === t.type || "continue" === t.type ? this.next = t.arg : "return" === t.type ? (this.rval = this.arg = t.arg, this.method = "return", this.next = "end") : "normal" === t.type && e && (this.next = e), y; }, finish: function finish(t) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var r = this.tryEntries[e]; if (r.finallyLoc === t) return this.complete(r.completion, r.afterLoc), resetTryEntry(r), y; } }, catch: function _catch(t) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var r = this.tryEntries[e]; if (r.tryLoc === t) { var n = r.completion; if ("throw" === n.type) { var o = n.arg; resetTryEntry(r); } return o; } } throw Error("illegal catch attempt"); }, delegateYield: function delegateYield(e, r, n) { return this.delegate = { iterator: values(e), resultName: r, nextLoc: n }, "next" === this.method && (this.arg = t), y; } }, e; }
+function asyncGeneratorStep(n, t, e, r, o, a, c) { try { var i = n[a](c), u = i.value; } catch (n) { return void e(n); } i.done ? t(u) : Promise.resolve(u).then(r, o); }
+function _asyncToGenerator(n) { return function () { var t = this, e = arguments; return new Promise(function (r, o) { var a = n.apply(t, e); function _next(n) { asyncGeneratorStep(a, r, o, _next, _throw, "next", n); } function _throw(n) { asyncGeneratorStep(a, r, o, _next, _throw, "throw", n); } _next(void 0); }); }; }
+function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
+var Body = function Body() {
+  var _useState = (0, _react.useState)([]),
+    _useState2 = _slicedToArray(_useState, 2),
+    listOfRestaurant = _useState2[0],
+    setListOfRestaurant = _useState2[1];
+  var _useState3 = (0, _react.useState)([]),
+    _useState4 = _slicedToArray(_useState3, 2),
+    FilteredList = _useState4[0],
+    setFilteredList = _useState4[1];
+  var _useState5 = (0, _react.useState)(""),
+    _useState6 = _slicedToArray(_useState5, 2),
+    searchText = _useState6[0],
+    setSearchText = _useState6[1];
+  var _useState7 = (0, _react.useState)(false),
+    _useState8 = _slicedToArray(_useState7, 2),
+    loadingData = _useState8[0],
+    setLoadingData = _useState8[1];
+
+  // Filtering resturants based on search
+  var filterData = function filterData(newsearchText, restaurants) {
+    return restaurants.filter(function (restaurant) {
+      var _restaurant$info;
+      return restaurant === null || restaurant === void 0 || (_restaurant$info = restaurant.info) === null || _restaurant$info === void 0 ? void 0 : _restaurant$info.name.toLowerCase().includes(searchText.toLowerCase());
+    });
+  };
+
+  // Whenever react state updates, react triggers reconcilation cycle (re-renders the component)
+  (0, _react.useEffect)(function () {
+    fetchData();
+  }, []);
+
+  // fetch all the original resturants
+  var fetchData = /*#__PURE__*/function () {
+    var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
+      var _json$data, data, json, restList;
+      return _regeneratorRuntime().wrap(function _callee$(_context) {
+        while (1) switch (_context.prev = _context.next) {
+          case 0:
+            _context.prev = 0;
+            setLoadingData(true);
+            _context.next = 4;
+            return fetch(_config.GET_RES_API_URL);
+          case 4:
+            data = _context.sent;
+            _context.next = 7;
+            return data.json();
+          case 7:
+            json = _context.sent;
+            restList = []; // console.log(json.data);
+            json === null || json === void 0 || (_json$data = json.data) === null || _json$data === void 0 || _json$data.cards.forEach(function (value) {
+              var _value$card;
+              if (value !== null && value !== void 0 && (_value$card = value.card) !== null && _value$card !== void 0 && (_value$card = _value$card.card) !== null && _value$card !== void 0 && (_value$card = _value$card.gridElements) !== null && _value$card !== void 0 && (_value$card = _value$card.infoWithStyle) !== null && _value$card !== void 0 && _value$card.restaurants) {
+                var _value$card2;
+                value === null || value === void 0 || (_value$card2 = value.card) === null || _value$card2 === void 0 || (_value$card2 = _value$card2.card) === null || _value$card2 === void 0 || (_value$card2 = _value$card2.gridElements) === null || _value$card2 === void 0 || (_value$card2 = _value$card2.infoWithStyle) === null || _value$card2 === void 0 || _value$card2.restaurants.forEach(function (val) {
+                  restList.push(val);
+                });
+              }
+            });
+            // const restaurant = json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+            if (restList) {
+              setListOfRestaurant(restList);
+              setLoadingData(false);
+              setFilteredList(restList);
+            }
+            _context.next = 16;
+            break;
+          case 13:
+            _context.prev = 13;
+            _context.t0 = _context["catch"](0);
+            console.error("Fetching errror::", _context.t0);
+          case 16:
+          case "end":
+            return _context.stop();
+        }
+      }, _callee, null, [[0, 13]]);
+    }));
+    return function fetchData() {
+      return _ref.apply(this, arguments);
+    };
+  }();
+  if (loadingData) {
+    return /*#__PURE__*/_react.default.createElement(_Shimmer.default, null);
+  }
+  var handleSearch = function handleSearch(e) {
+    var newSearchText = e.target.value;
+    setSearchText(newSearchText);
+    var filteredRestaurants = filterData(newSearchText, listOfRestaurant);
+    setFilteredList(filteredRestaurants);
+  };
+
+  // filtering top rated
+
+  var handleFilter = function handleFilter() {
+    var filteredList = listOfRestaurant.filter(function (data) {
+      var _data$info;
+      return (data === null || data === void 0 || (_data$info = data.info) === null || _data$info === void 0 ? void 0 : _data$info.avgRating) >= 4.0;
+    });
+    setFilteredList(filteredList);
+  };
+  // console.log("Featured List", FilteredList);
+
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
+    className: "search-container"
+  }, /*#__PURE__*/_react.default.createElement("input", {
+    type: "text",
+    placeholder: "Search restaurants",
+    value: searchText,
+    className: "search-input",
+    onChange: handleSearch
+  }), /*#__PURE__*/_react.default.createElement("button", {
+    className: "reset-btn",
+    onClick: function onClick() {
+      location.reload();
+    }
+  }, "Reset")), /*#__PURE__*/_react.default.createElement("div", {
+    className: "filtercontainer"
+  }, /*#__PURE__*/_react.default.createElement("button", {
+    className: "filter-btn",
+    onClick: handleFilter
+  }, "Top Rated Restaurant")), /*#__PURE__*/_react.default.createElement("div", {
+    className: "restaurant-list"
+  }, FilteredList.length > 0 ? FilteredList.map(function (restaurant, index) {
+    return /*#__PURE__*/_react.default.createElement(_RestaurantCard.default, {
+      data: restaurant,
+      key: index
+    });
+  }) : /*#__PURE__*/_react.default.createElement("p", null, "No restaurants available")));
+};
+var _default = exports.default = Body;
+},{"react":"node_modules/react/index.js","../components/config":"src/components/config.jsx","../components/RestaurantCard":"src/components/RestaurantCard.jsx","../components/Shimmer":"src/components/Shimmer.jsx"}],"src/components/Footer.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _react = _interopRequireDefault(require("react"));
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
+var Footer = function Footer() {
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: "footer"
+  }, /*#__PURE__*/_react.default.createElement("p", null, " Made with \u2764\uFE0F by Sagar Panwar "));
+};
+var _default = exports.default = Footer;
+},{"react":"node_modules/react/index.js"}],"src/components/About.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _react = _interopRequireDefault(require("react"));
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
+var About = function About() {
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h1", null, " about us page "));
+};
+var _default = exports.default = About;
+},{"react":"node_modules/react/index.js"}],"src/components/Contact.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _react = _interopRequireDefault(require("react"));
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
+var Contact = function Contact() {
+  return /*#__PURE__*/_react.default.createElement("div", null, "this is contact page");
+};
+var _default = exports.default = Contact;
+},{"react":"node_modules/react/index.js"}],"src/components/Error.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _react = _interopRequireDefault(require("react"));
+var _reactRouterDom = require("react-router-dom");
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
+var Error = function Error() {
+  var error = (0, _reactRouterDom.useRouteError)();
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h1", null, "Oops! Something went wrong."), /*#__PURE__*/_react.default.createElement("p", null, error));
+};
+var _default = exports.default = Error;
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/dist/index.js"}],"src/components/RestuarantMenu.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _react = _interopRequireWildcard(require("react"));
+var _Shimmer = _interopRequireDefault(require("./Shimmer"));
+var _reactRouterDom = require("react-router-dom");
+var _config = require("./config");
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
+function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function (e) { return e ? t : r; })(e); }
+function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; if (null === e || "object" != typeof e && "function" != typeof e) return { default: e }; var t = _getRequireWildcardCache(r); if (t && t.has(e)) return t.get(e); var n = { __proto__: null }, a = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var u in e) if ("default" !== u && {}.hasOwnProperty.call(e, u)) { var i = a ? Object.getOwnPropertyDescriptor(e, u) : null; i && (i.get || i.set) ? Object.defineProperty(n, u, i) : n[u] = e[u]; } return n.default = e, t && t.set(e, n), n; }
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ _regeneratorRuntime = function _regeneratorRuntime() { return e; }; var t, e = {}, r = Object.prototype, n = r.hasOwnProperty, o = Object.defineProperty || function (t, e, r) { t[e] = r.value; }, i = "function" == typeof Symbol ? Symbol : {}, a = i.iterator || "@@iterator", c = i.asyncIterator || "@@asyncIterator", u = i.toStringTag || "@@toStringTag"; function define(t, e, r) { return Object.defineProperty(t, e, { value: r, enumerable: !0, configurable: !0, writable: !0 }), t[e]; } try { define({}, ""); } catch (t) { define = function define(t, e, r) { return t[e] = r; }; } function wrap(t, e, r, n) { var i = e && e.prototype instanceof Generator ? e : Generator, a = Object.create(i.prototype), c = new Context(n || []); return o(a, "_invoke", { value: makeInvokeMethod(t, r, c) }), a; } function tryCatch(t, e, r) { try { return { type: "normal", arg: t.call(e, r) }; } catch (t) { return { type: "throw", arg: t }; } } e.wrap = wrap; var h = "suspendedStart", l = "suspendedYield", f = "executing", s = "completed", y = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var p = {}; define(p, a, function () { return this; }); var d = Object.getPrototypeOf, v = d && d(d(values([]))); v && v !== r && n.call(v, a) && (p = v); var g = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(p); function defineIteratorMethods(t) { ["next", "throw", "return"].forEach(function (e) { define(t, e, function (t) { return this._invoke(e, t); }); }); } function AsyncIterator(t, e) { function invoke(r, o, i, a) { var c = tryCatch(t[r], t, o); if ("throw" !== c.type) { var u = c.arg, h = u.value; return h && "object" == _typeof(h) && n.call(h, "__await") ? e.resolve(h.__await).then(function (t) { invoke("next", t, i, a); }, function (t) { invoke("throw", t, i, a); }) : e.resolve(h).then(function (t) { u.value = t, i(u); }, function (t) { return invoke("throw", t, i, a); }); } a(c.arg); } var r; o(this, "_invoke", { value: function value(t, n) { function callInvokeWithMethodAndArg() { return new e(function (e, r) { invoke(t, n, e, r); }); } return r = r ? r.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); } }); } function makeInvokeMethod(e, r, n) { var o = h; return function (i, a) { if (o === f) throw Error("Generator is already running"); if (o === s) { if ("throw" === i) throw a; return { value: t, done: !0 }; } for (n.method = i, n.arg = a;;) { var c = n.delegate; if (c) { var u = maybeInvokeDelegate(c, n); if (u) { if (u === y) continue; return u; } } if ("next" === n.method) n.sent = n._sent = n.arg;else if ("throw" === n.method) { if (o === h) throw o = s, n.arg; n.dispatchException(n.arg); } else "return" === n.method && n.abrupt("return", n.arg); o = f; var p = tryCatch(e, r, n); if ("normal" === p.type) { if (o = n.done ? s : l, p.arg === y) continue; return { value: p.arg, done: n.done }; } "throw" === p.type && (o = s, n.method = "throw", n.arg = p.arg); } }; } function maybeInvokeDelegate(e, r) { var n = r.method, o = e.iterator[n]; if (o === t) return r.delegate = null, "throw" === n && e.iterator.return && (r.method = "return", r.arg = t, maybeInvokeDelegate(e, r), "throw" === r.method) || "return" !== n && (r.method = "throw", r.arg = new TypeError("The iterator does not provide a '" + n + "' method")), y; var i = tryCatch(o, e.iterator, r.arg); if ("throw" === i.type) return r.method = "throw", r.arg = i.arg, r.delegate = null, y; var a = i.arg; return a ? a.done ? (r[e.resultName] = a.value, r.next = e.nextLoc, "return" !== r.method && (r.method = "next", r.arg = t), r.delegate = null, y) : a : (r.method = "throw", r.arg = new TypeError("iterator result is not an object"), r.delegate = null, y); } function pushTryEntry(t) { var e = { tryLoc: t[0] }; 1 in t && (e.catchLoc = t[1]), 2 in t && (e.finallyLoc = t[2], e.afterLoc = t[3]), this.tryEntries.push(e); } function resetTryEntry(t) { var e = t.completion || {}; e.type = "normal", delete e.arg, t.completion = e; } function Context(t) { this.tryEntries = [{ tryLoc: "root" }], t.forEach(pushTryEntry, this), this.reset(!0); } function values(e) { if (e || "" === e) { var r = e[a]; if (r) return r.call(e); if ("function" == typeof e.next) return e; if (!isNaN(e.length)) { var o = -1, i = function next() { for (; ++o < e.length;) if (n.call(e, o)) return next.value = e[o], next.done = !1, next; return next.value = t, next.done = !0, next; }; return i.next = i; } } throw new TypeError(_typeof(e) + " is not iterable"); } return GeneratorFunction.prototype = GeneratorFunctionPrototype, o(g, "constructor", { value: GeneratorFunctionPrototype, configurable: !0 }), o(GeneratorFunctionPrototype, "constructor", { value: GeneratorFunction, configurable: !0 }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, u, "GeneratorFunction"), e.isGeneratorFunction = function (t) { var e = "function" == typeof t && t.constructor; return !!e && (e === GeneratorFunction || "GeneratorFunction" === (e.displayName || e.name)); }, e.mark = function (t) { return Object.setPrototypeOf ? Object.setPrototypeOf(t, GeneratorFunctionPrototype) : (t.__proto__ = GeneratorFunctionPrototype, define(t, u, "GeneratorFunction")), t.prototype = Object.create(g), t; }, e.awrap = function (t) { return { __await: t }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, c, function () { return this; }), e.AsyncIterator = AsyncIterator, e.async = function (t, r, n, o, i) { void 0 === i && (i = Promise); var a = new AsyncIterator(wrap(t, r, n, o), i); return e.isGeneratorFunction(r) ? a : a.next().then(function (t) { return t.done ? t.value : a.next(); }); }, defineIteratorMethods(g), define(g, u, "Generator"), define(g, a, function () { return this; }), define(g, "toString", function () { return "[object Generator]"; }), e.keys = function (t) { var e = Object(t), r = []; for (var n in e) r.push(n); return r.reverse(), function next() { for (; r.length;) { var t = r.pop(); if (t in e) return next.value = t, next.done = !1, next; } return next.done = !0, next; }; }, e.values = values, Context.prototype = { constructor: Context, reset: function reset(e) { if (this.prev = 0, this.next = 0, this.sent = this._sent = t, this.done = !1, this.delegate = null, this.method = "next", this.arg = t, this.tryEntries.forEach(resetTryEntry), !e) for (var r in this) "t" === r.charAt(0) && n.call(this, r) && !isNaN(+r.slice(1)) && (this[r] = t); }, stop: function stop() { this.done = !0; var t = this.tryEntries[0].completion; if ("throw" === t.type) throw t.arg; return this.rval; }, dispatchException: function dispatchException(e) { if (this.done) throw e; var r = this; function handle(n, o) { return a.type = "throw", a.arg = e, r.next = n, o && (r.method = "next", r.arg = t), !!o; } for (var o = this.tryEntries.length - 1; o >= 0; --o) { var i = this.tryEntries[o], a = i.completion; if ("root" === i.tryLoc) return handle("end"); if (i.tryLoc <= this.prev) { var c = n.call(i, "catchLoc"), u = n.call(i, "finallyLoc"); if (c && u) { if (this.prev < i.catchLoc) return handle(i.catchLoc, !0); if (this.prev < i.finallyLoc) return handle(i.finallyLoc); } else if (c) { if (this.prev < i.catchLoc) return handle(i.catchLoc, !0); } else { if (!u) throw Error("try statement without catch or finally"); if (this.prev < i.finallyLoc) return handle(i.finallyLoc); } } } }, abrupt: function abrupt(t, e) { for (var r = this.tryEntries.length - 1; r >= 0; --r) { var o = this.tryEntries[r]; if (o.tryLoc <= this.prev && n.call(o, "finallyLoc") && this.prev < o.finallyLoc) { var i = o; break; } } i && ("break" === t || "continue" === t) && i.tryLoc <= e && e <= i.finallyLoc && (i = null); var a = i ? i.completion : {}; return a.type = t, a.arg = e, i ? (this.method = "next", this.next = i.finallyLoc, y) : this.complete(a); }, complete: function complete(t, e) { if ("throw" === t.type) throw t.arg; return "break" === t.type || "continue" === t.type ? this.next = t.arg : "return" === t.type ? (this.rval = this.arg = t.arg, this.method = "return", this.next = "end") : "normal" === t.type && e && (this.next = e), y; }, finish: function finish(t) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var r = this.tryEntries[e]; if (r.finallyLoc === t) return this.complete(r.completion, r.afterLoc), resetTryEntry(r), y; } }, catch: function _catch(t) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var r = this.tryEntries[e]; if (r.tryLoc === t) { var n = r.completion; if ("throw" === n.type) { var o = n.arg; resetTryEntry(r); } return o; } } throw Error("illegal catch attempt"); }, delegateYield: function delegateYield(e, r, n) { return this.delegate = { iterator: values(e), resultName: r, nextLoc: n }, "next" === this.method && (this.arg = t), y; } }, e; }
+function asyncGeneratorStep(n, t, e, r, o, a, c) { try { var i = n[a](c), u = i.value; } catch (n) { return void e(n); } i.done ? t(u) : Promise.resolve(u).then(r, o); }
+function _asyncToGenerator(n) { return function () { var t = this, e = arguments; return new Promise(function (r, o) { var a = n.apply(t, e); function _next(n) { asyncGeneratorStep(a, r, o, _next, _throw, "next", n); } function _throw(n) { asyncGeneratorStep(a, r, o, _next, _throw, "throw", n); } _next(void 0); }); }; }
+function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
+var RestuarantMenu = function RestuarantMenu() {
+  var _useState = (0, _react.useState)(null),
+    _useState2 = _slicedToArray(_useState, 2),
+    resInfo = _useState2[0],
+    SetresInfo = _useState2[1];
+  var _useParams = (0, _reactRouterDom.useParams)(),
+    resId = _useParams.resId; // call params and get value of restaurant id using object destructuring 
+  var _useState3 = (0, _react.useState)([]),
+    _useState4 = _slicedToArray(_useState3, 2),
+    menuItems = _useState4[0],
+    setMenuItems = _useState4[1];
+  (0, _react.useEffect)(function () {
+    fetchMenu();
+  }, []);
+  var fetchMenu = /*#__PURE__*/function () {
+    var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
+      var _json$message, _json$data, _json$data2;
+      var data, json, restaurantData, menuItemsData;
+      return _regeneratorRuntime().wrap(function _callee$(_context) {
+        while (1) switch (_context.prev = _context.next) {
+          case 0:
+            _context.next = 2;
+            return fetch(_config.GET_MENU_API_URL);
+          case 2:
+            data = _context.sent;
+            _context.next = 5;
+            return data.json();
+          case 5:
+            json = _context.sent;
+            if (!(json !== null && json !== void 0 && (_json$message = json.message) !== null && _json$message !== void 0 && _json$message.includes("Oops!! Something Went Wrong"))) {
+              _context.next = 8;
+              break;
+            }
+            throw new Error("API Error: " + json.message);
+          case 8:
+            console.log('json data::', json);
+            restaurantData = json === null || json === void 0 || (_json$data = json.data) === null || _json$data === void 0 || (_json$data = _json$data.cards) === null || _json$data === void 0 || (_json$data = _json$data.find(function (card) {
+              var _card$card;
+              return card === null || card === void 0 || (_card$card = card.card) === null || _card$card === void 0 ? void 0 : _card$card.info;
+            })) === null || _json$data === void 0 || (_json$data = _json$data.card) === null || _json$data === void 0 ? void 0 : _json$data.info;
+            SetresInfo(restaurantData);
+            menuItemsData = (json === null || json === void 0 || (_json$data2 = json.data) === null || _json$data2 === void 0 || (_json$data2 = _json$data2.cards) === null || _json$data2 === void 0 || (_json$data2 = _json$data2.find(function (card) {
+              return card === null || card === void 0 ? void 0 : card.groupedCard;
+            })) === null || _json$data2 === void 0 || (_json$data2 = _json$data2.groupedCard) === null || _json$data2 === void 0 || (_json$data2 = _json$data2.cardGroupMap) === null || _json$data2 === void 0 || (_json$data2 = _json$data2.REGULAR) === null || _json$data2 === void 0 || (_json$data2 = _json$data2.cards) === null || _json$data2 === void 0 ? void 0 : _json$data2.flatMap(function (card) {
+              var _card$card2;
+              return card === null || card === void 0 || (_card$card2 = card.card) === null || _card$card2 === void 0 ? void 0 : _card$card2.info;
+            })) || [];
+            setMenuItems(menuItemsData);
+          case 13:
+          case "end":
+            return _context.stop();
+        }
+      }, _callee);
+    }));
+    return function fetchMenu() {
+      return _ref.apply(this, arguments);
+    };
+  }();
+  if (resInfo === null) {
+    return /*#__PURE__*/_react.default.createElement(_Shimmer.default, null);
+  }
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: "restaurant-menu"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "restaurant-summary"
+  }, /*#__PURE__*/_react.default.createElement("img", {
+    src: _config.IMG_CDN,
+    alt: name
+  }), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h2", null, resInfo.name), /*#__PURE__*/_react.default.createElement("p", null, resInfo.cuisines.join(", ")), /*#__PURE__*/_react.default.createElement("p", null, resInfo.avgRating, " \u2605 | ", resInfo.sla.slaString, " | ", resInfo.costForTwoMessage))), /*#__PURE__*/_react.default.createElement("div", {
+    className: "recommendation"
+  }));
+};
+var _default = exports.default = RestuarantMenu;
+},{"react":"node_modules/react/index.js","./Shimmer":"src/components/Shimmer.jsx","react-router-dom":"node_modules/react-router-dom/dist/index.js","./config":"src/components/config.jsx"}],"app.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireWildcard(require("react"));
@@ -39539,6 +39513,8 @@ var _Body = _interopRequireDefault(require("./src/components/Body"));
 var _Footer = _interopRequireDefault(require("./src/components/Footer"));
 var _About = _interopRequireDefault(require("./src/components/About"));
 var _Contact = _interopRequireDefault(require("./src/components/Contact"));
+var _Error = _interopRequireDefault(require("./src/components/Error"));
+var _RestuarantMenu = _interopRequireDefault(require("./src/components/RestuarantMenu"));
 var _reactRouterDom = require("react-router-dom");
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
 function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function (e) { return e ? t : r; })(e); }
@@ -39549,6 +39525,7 @@ var AppLayout = function AppLayout() {
 var appRouter = (0, _reactRouterDom.createBrowserRouter)([{
   path: "/",
   element: /*#__PURE__*/_react.default.createElement(AppLayout, null),
+  errorElement: /*#__PURE__*/_react.default.createElement(_Error.default, null),
   children: [{
     index: true,
     element: /*#__PURE__*/_react.default.createElement(_Body.default, null)
@@ -39558,13 +39535,19 @@ var appRouter = (0, _reactRouterDom.createBrowserRouter)([{
   }, {
     path: "contact",
     element: /*#__PURE__*/_react.default.createElement(_Contact.default, null)
+  }, {
+    path: "restaurantmenu",
+    element: /*#__PURE__*/_react.default.createElement(_RestuarantMenu.default, null)
   }]
+}, {
+  path: "*",
+  element: /*#__PURE__*/_react.default.createElement(_Error.default, null)
 }]);
 var root = _client.default.createRoot(document.getElementById("root"));
 root.render( /*#__PURE__*/_react.default.createElement(_reactRouterDom.RouterProvider, {
   router: appRouter
 }));
-},{"react":"node_modules/react/index.js","react-dom/client":"node_modules/react-dom/client.js","./src/components/Header":"src/components/Header.jsx","./src/components/Body":"src/components/Body.jsx","./src/components/Footer":"src/components/Footer.jsx","./src/components/About":"src/components/About.jsx","./src/components/Contact":"src/components/Contact.jsx","react-router-dom":"node_modules/react-router-dom/dist/index.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-dom/client":"node_modules/react-dom/client.js","./src/components/Header":"src/components/Header.jsx","./src/components/Body":"src/components/Body.jsx","./src/components/Footer":"src/components/Footer.jsx","./src/components/About":"src/components/About.jsx","./src/components/Contact":"src/components/Contact.jsx","./src/components/Error":"src/components/Error.jsx","./src/components/RestuarantMenu":"src/components/RestuarantMenu.jsx","react-router-dom":"node_modules/react-router-dom/dist/index.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -39589,7 +39572,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49407" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51176" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

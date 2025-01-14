@@ -34,4 +34,19 @@ const appRouter = createBrowserRouter ([
 ```SPA - React is known as single page application cos its redenrs comp from single page and doesnt reload/refresh the entire page. 
 we use client site render in this method. ```
 
+useParams() hook used to access dynamic data from URL(here api), its from react-router-dom. eg./:resId in url will use the parameters of 
 
+
+
+
+
+
+
+
+
+
+ ==============
+| Error faced: |
+ ==============
+- Make sure the return statement and the JSX are on the same line, or wrap the JSX right after the return without a line break.
+- deprecated 

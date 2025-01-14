@@ -3,8 +3,8 @@ import { GET_RES_API_URL, restaurantList } from "../components/config";
 import RestaurantCard from "../components/RestaurantCard";
 import Shimmer from "../components/Shimmer";
 
-
 const Body = () => {
+
   const [listOfRestaurant, setListOfRestaurant] = useState([]);
   const [FilteredList, setFilteredList] = useState([]);
   const [searchText, setSearchText] = useState("");
@@ -51,15 +51,6 @@ const filterData = (newsearchText, restaurants) => {
   if (loadingData) {
     return <Shimmer/>
   }
-
-  // const handleSearch = (e) => {
-  //   setSearchText(e.target.value);
-  //   const filteredRestaurants = filterData(searchText, listOfRestaurant);
-  //   // console.log(filteredRestaurants);
-  //   setListOfRestaurant(filteredRestaurants);
-  // }
-
-
   const handleSearch = (e) => {
     const newSearchText = e.target.value;
     setSearchText(newSearchText);
@@ -75,21 +66,13 @@ const filterData = (newsearchText, restaurants) => {
     );
     setFilteredList(filteredList);
   }
-
-  // const handleFilter = () => {
-  //   setLoadingData(true)
-  //   const filteredList = listOfRestaurant.filter(
-  //     (data) => data?.info?.avgRating >=4.0
-  //   );
-  //   setLoadingData(false)
-  //   setListOfRestaurant(filteredList);
-  // }
-
+  // console.log("Featured List", FilteredList);
+  
   return (
     <>
       <div className="search-container">
         <input type="text" placeholder="Search restaurants" value={searchText} className="search-input" onChange={handleSearch} />
-        <button onClick={() => {location.reload()}}>reset</button>
+        <button className="reset-btn" onClick={() => {location.reload()}}>Reset</button>
       </div>
       <div className="filtercontainer">
         <button
@@ -108,16 +91,6 @@ const filterData = (newsearchText, restaurants) => {
         <p>No restaurants available</p>
       )}
     </div>
-     {/* <div className="restaurant-list">
-        {listOfRestaurant.length > 0 ? (
-          FilteredList.map((restaurant,index) => (
-            <RestaurantCard data={restaurant}
-              key={index} />
-          ))
-        ) : (
-          <p>No restaurants available</p>
-        )}
-      </div> */}
     </>
   );
 };

@@ -14,6 +14,7 @@
   "author": "Sagar Panwar",
   "license": "ISC",
   "dependencies": {
+    "config": "^3.3.12",
     "parcel": "^2.12.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

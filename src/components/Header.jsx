@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import logo from "../../assests/images/logofoodsite.png"
+import { Link } from "react-router-dom";
 
 const Title = () => {
     return(
@@ -12,10 +13,10 @@ const Title = () => {
     return (
       <div className="nav-items">
       <ul>
-        <li>Home</li>
-        <li>About</li>
-        <li>Contact</li>
-        <li>Cart</li>
+        <li> <Link to="/"> Home </Link></li>
+        <li> <Link to="/about">About  </Link> </li>
+        <li><Link to="/contact"> Contact  </Link> </li>
+        <li><Link to ="/"> Cart </Link> </li>
         <button className="loginBtn" 
         onClick={()=> {
           btnNameReact === "Login" ?
