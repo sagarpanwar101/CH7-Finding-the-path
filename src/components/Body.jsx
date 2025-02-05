@@ -74,14 +74,14 @@ const filterData = (newsearchText, restaurants) => {
         <input type="text" placeholder="Search restaurants" value={searchText} className="search-input" onChange={handleSearch} />
         <button className="reset-btn" onClick={() => {location.reload()}}>Reset</button>
       </div>
-      <div className="filtercontainer">
+      {/* <div className="filtercontainer">
         <button
           className="filter-btn"
           onClick={handleFilter}
         >
           Top Rated Restaurant
         </button>
-      </div>
+      </div> */}
       <div className="restaurant-list">
       {FilteredList.length > 0 ? (
         FilteredList.map((restaurant, index) => (

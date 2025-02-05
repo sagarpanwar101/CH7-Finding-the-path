@@ -39,15 +39,15 @@ const appRouter = createBrowserRouter([
         element: <Contact />,
       },
       {
-        path: "restaurantmenu",
+        path: "restaurantmenu/:id",
         element: <RestuarantMenu />,
       },
     ]
   },
-  {
-    path: "*",
-    element: <Error />
-  }
+  // {
+  //   path: "*",
+  //   element: <Error />
+  // }
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
