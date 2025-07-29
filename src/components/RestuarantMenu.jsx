@@ -34,7 +34,7 @@ const RestuarantMenu = () => {
             throw new Error("API Error: " + json.message); // If the API response contains the error message, throw an error.
         }
 
-        console.log('json data::', json);
+        // console.log('json data::', json);
 
         const restaurantData = json?.data?.cards[2]?.card?.card?.info
 
@@ -44,7 +44,7 @@ const RestuarantMenu = () => {
 
         setMenuItems(menuItemsData);
 
-        console.log('menuItemsData::', menuItemsData);
+        // console.log('menuItemsData::', menuItemsData);
     };
 
     if (resInfo === null) {

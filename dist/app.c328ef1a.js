@@ -39468,13 +39468,14 @@ var RestuarantMenu = function RestuarantMenu() {
             }
             throw new Error("API Error: " + json.message);
           case 9:
-            console.log('json data::', json);
+            // console.log('json data::', json);
             restaurantData = json === null || json === void 0 || (_json$data = json.data) === null || _json$data === void 0 || (_json$data = _json$data.cards[2]) === null || _json$data === void 0 || (_json$data = _json$data.card) === null || _json$data === void 0 || (_json$data = _json$data.card) === null || _json$data === void 0 ? void 0 : _json$data.info;
             SetresInfo(restaurantData);
             menuItemsData = json === null || json === void 0 || (_json$data2 = json.data) === null || _json$data2 === void 0 || (_json$data2 = _json$data2.cards[4]) === null || _json$data2 === void 0 || (_json$data2 = _json$data2.groupedCard) === null || _json$data2 === void 0 || (_json$data2 = _json$data2.cardGroupMap) === null || _json$data2 === void 0 || (_json$data2 = _json$data2.REGULAR) === null || _json$data2 === void 0 || (_json$data2 = _json$data2.cards[1]) === null || _json$data2 === void 0 || (_json$data2 = _json$data2.card) === null || _json$data2 === void 0 || (_json$data2 = _json$data2.card) === null || _json$data2 === void 0 ? void 0 : _json$data2.itemCards;
             setMenuItems(menuItemsData);
-            console.log('menuItemsData::', menuItemsData);
-          case 15:
+
+            // console.log('menuItemsData::', menuItemsData);
+          case 13:
           case "end":
             return _context.stop();
         }
@@ -39579,7 +39580,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62451" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58443" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
